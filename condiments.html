@@ -28,40 +28,20 @@
 
     <!-- ENTÊTE DE PAGE -->
     <div class="max-w-7xl mx-auto px-4 pt-12 text-center">
-        <h1 class="font-playfair text-3xl sm:text-4xl font-extrabold text-brand-darkgreen">Pâtes & Condiments</h1>
-        <p class="text-slate-500 text-sm mt-2">Le meilleur goût de notre terroir pour vos sauces onctueuses.</p>
+        <h1 class="font-playfair text-3xl sm:text-4xl font-extrabold text-brand-darkgreen">Pâtes, Condiments & Infusions</h1>
+        <p class="text-slate-500 text-sm mt-2">Le meilleur goût et les bienfaits de notre terroir pour vos recettes et vos tisanes de santé.</p>
         <div class="w-12 h-1 bg-brand-orange mx-auto mt-4 rounded-full"></div>
     </div>
 
-    <!-- GRILLE PRODUITS -->
-    <main class="max-w-7xl mx-auto px-4 py-12 flex-grow grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+    <!-- GRILLE PRODUITS ENRICHIE -->
+    <main class="max-w-7xl mx-auto px-4 py-12 flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
         
-        <!-- PRODUIT 1 -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
-            <div>
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/2179846533683002479_0" alt="Arachide Poudre" class="w-full h-48 object-cover rounded-xl mb-4">
-                <h3 class="font-playfair text-xl font-bold">Arachide en poudre</h3>
-                <p class="text-xs text-slate-500 mt-1">Poudre extra-fine d'arachides grillées pour vos préparations.</p>
-            </div>
-            <div class="mt-4">
-                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
-                <select id="size-poudre" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
-                    <option value="500g - 1 500 FCFA">500g — 1 500 FCFA</option>
-                    <option value="1kg - 2 800 FCFA">1kg — 2 800 FCFA</option>
-                    <option value="5kg - 13 500 FCFA">5kg — 13 500 FCFA</option>
-                </select>
-                <button onclick="orderWhatsApp('Arachide en poudre', 'size-poudre')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
-                    <i class="fa-brands fa-whatsapp"></i> <span>Commander cet article</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- PRODUIT 2 -->
+        <!-- PRODUIT 1 : TIGUADEGE -->
         <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
             <div>
                 <img src="http://googleusercontent.com/image_collection/image_retrieval/10741805376329937308_0" alt="Tiguadege" class="w-full h-48 object-cover rounded-xl mb-4">
                 <h3 class="font-playfair text-xl font-bold">Tiguadégué (Pâte d'arachide)</h3>
-                <p class="text-xs text-slate-500 mt-1">Pâte d'arachide pure et onctueuse, la base idéale pour un Mafé réussi.</p>
+                <p class="text-xs text-slate-500 mt-1">Pâte d'arachide artisanale de Bambey ultra-onctueuse, indispensable pour un Mafé réussi.</p>
             </div>
             <div class="mt-4">
                 <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
@@ -71,20 +51,172 @@
                     <option value="5kg - 16 500 FCFA">5kg — 16 500 FCFA</option>
                 </select>
                 <button onclick="orderWhatsApp('Tiguadégué', 'size-tiguadege')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
-                    <i class="fa-brands fa-whatsapp"></i> <span>Commander cet article</span>
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 2 : ARACHIDE EN POUDRE -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/2179846533683002479_0" alt="Arachide Poudre" class="w-full h-48 object-cover rounded-xl mb-4">
+                <h3 class="font-playfair text-xl font-bold">Arachide en poudre</h3>
+                <p class="text-xs text-slate-500 mt-1">Poudre d'arachide dorée et extra-fine, parfaite pour aromatiser et lier vos sauces.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-poudre" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="500g - 1 500 FCFA">500g — 1 500 FCFA</option>
+                    <option value="1kg - 2 800 FCFA">1kg — 2 800 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Arachide en poudre', 'size-poudre')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 3 : BISSAP ROUGE -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-rose-950 rounded-xl mb-4 flex items-center justify-center text-white text-5xl">🌺</div>
+                <h3 class="font-playfair text-xl font-bold">Bissap Rouge (Fleurs)</h3>
+                <p class="text-xs text-slate-500 mt-1">Fleurs d'hibiscus rouges entières, idéales pour préparer le célèbre jus de bissap frais.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-bissap-rouge" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="500g - 1 500 FCFA">500g — 1 500 FCFA</option>
+                    <option value="1kg - 2 800 FCFA">1kg — 2 800 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Bissap Rouge', 'size-bissap-rouge')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 4 : BISSAP BLANC -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-yellow-50 rounded-xl mb-4 flex items-center justify-center text-5xl">🍂</div>
+                <h3 class="font-playfair text-xl font-bold">Bissap Blanc (Fleurs)</h3>
+                <p class="text-xs text-slate-500 mt-1">Fleurs de bissap blanc au goût plus acidulé et doux, parfait en infusion chaude ou sauces.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-bissap-blanc" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="500g - 1 800 FCFA">500g — 1 800 FCFA</option>
+                    <option value="1kg - 3 300 FCFA">1kg — 3 300 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Bissap Blanc', 'size-bissap-blanc')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 5 : NEBEDAY POUDRE -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-emerald-950/20 rounded-xl mb-4 flex items-center justify-center text-green-700 text-5xl">🍃</div>
+                <h3 class="font-playfair text-xl font-bold">Nébéday en Poudre (Moringa)</h3>
+                <p class="text-xs text-slate-500 mt-1">Super-aliment en poudre fine de Moringa séchée, excellent pour fortifier vos bouillies.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-nebeday-poudre" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="250g - 1 500 FCFA">250g — 1 500 FCFA</option>
+                    <option value="500g - 2 800 FCFA">500g — 2 800 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Nébéday en Poudre', 'size-nebeday-poudre')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 6 : NEBEDAY FEUILLES -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-emerald-900/10 rounded-xl mb-4 flex items-center justify-center text-emerald-600 text-5xl">🌿</div>
+                <h3 class="font-playfair text-xl font-bold">Nébéday en Feuilles</h3>
+                <p class="text-xs text-slate-500 mt-1">Feuilles de moringa entières et séchées naturellement, très vertueuses pour le thé du soir.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-nebeday-feuilles" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="250g - 1 200 FCFA">250g — 1 200 FCFA</option>
+                    <option value="500g - 2 200 FCFA">500g — 2 200 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Nébéday en Feuilles', 'size-nebeday-feuilles')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 7 : POUDRE DE NETETOU -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-amber-950/10 rounded-xl mb-4 flex items-center justify-center text-amber-950 text-5xl">🧆</div>
+                <h3 class="font-playfair text-xl font-bold">Poudre de Nététou</h3>
+                <p class="text-xs text-slate-500 mt-1">Nététou pur et séché à base de graines de néré fermentées, idéal pour parfumer vos plats.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-netetou" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="250g - 1 500 FCFA">250g — 1 500 FCFA</option>
+                    <option value="500g - 2 850 FCFA">500g — 2 850 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Poudre de Nététou', 'size-netetou')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 8 : GOMBO SEC -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-stone-50 rounded-xl mb-4 flex items-center justify-center text-green-600 text-5xl">🌵</div>
+                <h3 class="font-playfair text-xl font-bold">Poudre de Gombo Sec</h3>
+                <p class="text-xs text-slate-500 mt-1">Gombo séché réduit en poudre très fine pour réussir vos sauces gluantes en un clin d'œil.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-gombo" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="250g - 1 000 FCFA">250g — 1 000 FCFA</option>
+                    <option value="500g - 1 900 FCFA">500g — 1 900 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Poudre de Gombo Sec', 'size-gombo')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 9 : LALO -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-emerald-50 rounded-xl mb-4 flex items-center justify-center text-emerald-800 text-5xl">🌳</div>
+                <h3 class="font-playfair text-xl font-bold">Lalo (Poudre de Baobab)</h3>
+                <p class="text-xs text-slate-500 mt-1">Poudre liante traditionnelle de feuilles de baobab séchées, indispensable pour votre Thiéré.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-lalo" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="250g - 800 FCFA">250g — 800 FCFA</option>
+                    <option value="500g - 1 500 FCFA">500g — 1 500 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Lalo (Poudre de Baobab)', 'size-lalo')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
                 </button>
             </div>
         </div>
     </main>
 
-    <footer class="bg-stone-900 text-stone-500 py-6 text-center text-xs w-full mt-auto">
+    <footer class="bg-stone-900 text-stone-500 py-6 text-center text-xs mt-auto w-full">
         Bambey, Sénégal — Livraison partout dans le monde.
     </footer>
 
     <script>
         function orderWhatsApp(name, selectId) {
             const format = document.getElementById(selectId).value;
-            const text = `Bonjour NDIAYE LOCAL ! 🌾\nJe souhaite commander le produit suivant depuis votre page Condiments :\n\n- Condiment : *${name}*\n- Format & Prix : *${format}*\n\nExpédition depuis Bambey. Merci !`;
+            const text = `Bonjour NDIAYE LOCAL ! 🌾\nJe souhaite commander le produit suivant depuis votre page Condiments :\n\n- Article : *${name}*\n- Format & Prix : *${format}*\n\nExpédition depuis Bambey. Merci !`;
             window.open(`https://wa.me/221778688830?text=${encodeURIComponent(text)}`, '_blank');
         }
     </script>
