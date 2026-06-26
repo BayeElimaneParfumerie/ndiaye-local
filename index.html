@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NDIAYE LOCAL - Le meilleur du terroir sénégalais</title>
-    <!-- Tailwind CSS pour un design ultra-moderne -->
+    <!-- Tailwind CSS pour un design pro et réactif -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts pour une typographie raffinée -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2 family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
@@ -36,19 +36,10 @@
         }
     </script>
     <style>
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 3px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
 <body class="bg-brand-lightbg font-jakarta text-slate-800 antialiased min-h-screen flex flex-col">
@@ -56,24 +47,24 @@
     <!-- BARRE DE NAVIGATION -->
     <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200/80 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-3 group">
+            <a href="#" onclick="showSection('all')" class="flex items-center space-x-3 group">
                 <div class="w-10 h-10 bg-brand-darkgreen rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-all">
                     <i class="fa-solid fa-wheat-awn text-xl text-brand-lightgreen"></i>
                 </div>
                 <div>
                     <span class="font-playfair text-xl sm:text-2xl font-extrabold tracking-wide text-brand-darkgreen block leading-none">NDIAYE LOCAL</span>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-terracotta font-bold block mt-1">Sénégal • Qualité Premium</span>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-terracotta font-bold block mt-1">Bambey • Qualité Premium</span>
                 </div>
             </a>
             
-            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide text-slate-600">
-                <a href="#cereales" class="hover:text-brand-green transition">Céréales & Dérivés</a>
-                <a href="#legumineuses" class="hover:text-brand-green transition">Légumineuses</a>
-                <a href="#condiments" class="hover:text-brand-green transition">Pâtes & Condiments</a>
-                <a href="#engagements" class="hover:text-brand-green transition">Nos Engagements</a>
+            <!-- Navigation par Catégories (Changement de page dynamique) -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-bold tracking-wide text-slate-600">
+                <button onclick="showSection('cereales')" class="hover:text-brand-green transition focus:outline-none">Céréales & Dérivés</button>
+                <button onclick="showSection('legumineuses')" class="hover:text-brand-green transition focus:outline-none">Légumineuses</button>
+                <button onclick="showSection('condiments')" class="hover:text-brand-green transition focus:outline-none">Pâtes & Condiments</button>
             </div>
 
-            <!-- Bouton Panier Flottant d'En-tête -->
+            <!-- Bouton Panier -->
             <button onclick="toggleCart(true)" class="relative p-2.5 bg-brand-lightgreen/50 text-brand-darkgreen hover:bg-brand-lightgreen rounded-full transition-all focus:outline-none flex items-center space-x-2">
                 <div class="relative">
                     <i class="fa-solid fa-basket-shopping text-xl"></i>
@@ -84,389 +75,340 @@
         </div>
     </nav>
 
-    <!-- ACCUEIL PRINCIPAL (HERO SECTION) -->
-    <header class="relative bg-brand-darkgreen text-white overflow-hidden py-20 lg:py-32">
-        <div class="absolute inset-0 z-0 opacity-20">
-            <!-- Image d'arrière-plan de haute qualité représentant l'agriculture et les céréales locales -->
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/8252814092474362685_0" alt="Champs de céréales" class="w-full h-full object-cover">
-        </div>
-        <!-- Gradient overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-brand-darkgreen via-brand-darkgreen/90 to-transparent z-10"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-brand-lightgreen/10 text-brand-lightgreen border border-brand-lightgreen/20">
-                    <i class="fa-solid fa-certificate mr-1.5 text-brand-orange"></i> 100% Naturel & Artisanal sénégalais
-                </span>
-                <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
-                    Le meilleur de notre terroir, <span class="text-brand-lightgreen">du champ à votre table</span>.
-                </h1>
-                <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-                    Sankal, Thiéré, Thiakry, Niébé... Commandez vos essentiels de cuisine en formats flexibles, de <strong class="text-white font-semibold">500g jusqu'à 50kg</strong>, conditionnés avec amour et hygiène pour préserver toutes leurs saveurs traditionnelles.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
-                    <a href="#boutique" class="px-8 py-4 bg-brand-orange hover:bg-brand-orange/95 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 text-center">
-                        <i class="fa-solid fa-basket-shopping mr-2"></i> Découvrir la Boutique
-                    </a>
-                    <a href="#engagements" class="px-8 py-4 bg-white/10 hover:bg-white/15 text-white font-semibold rounded-xl border border-white/20 transition-all text-center">
-                        En savoir plus
-                    </a>
-                </div>
+    <!-- SECTION ENCART DE BIENVENUE & LIVRAISON (BANNER MONDIAL) -->
+    <div class="bg-brand-terracotta text-white py-2 text-center text-xs font-bold tracking-wider px-4">
+        <i class="fa-solid fa-globe mr-2 animate-pulse"></i> Basé à Bambey — Nous livrons partout au Sénégal et dans le Monde ! ✈️
+    </div>
+
+    <!-- PAGE D'ACCUEIL PRINCIPALE (HERO & ENGAGEMENTS) -->
+    <div id="main-landing-view">
+        <!-- HERO SECTION -->
+        <header class="relative bg-brand-darkgreen text-white overflow-hidden py-20 lg:py-28">
+            <div class="absolute inset-0 z-0 opacity-25">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/8252814092474362685_0" alt="Champs de céréales" class="w-full h-full object-cover">
             </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-darkgreen via-brand-darkgreen/95 to-transparent z-10"></div>
             
-            <div class="lg:col-span-5 hidden lg:flex justify-center">
-                <!-- Visuel d'illustration chic d'un panier typique -->
-                <div class="relative w-80 h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/14882348487800454443_0" alt="Plat traditionnel sénégalais" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                        <h3 class="font-playfair text-lg font-bold text-white">Thiakry traditionnel crémeux</h3>
-                        <p class="text-xs text-stone-300">Préparé à base de notre mil local purifié.</p>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-brand-lightgreen/10 text-brand-lightgreen border border-brand-lightgreen/20">
+                        <i class="fa-solid fa-certificate mr-1.5 text-brand-orange"></i> Produits Naturels du Sénégal
+                    </span>
+                    <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+                        Le meilleur de notre terroir, <span class="text-brand-lightgreen">du champ à votre table</span>.
+                    </h1>
+                    <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Commandez vos essentiels de cuisine en formats flexibles, de <strong class="text-white font-semibold">500g jusqu'à 50kg</strong>. Un conditionnement haut de gamme adapté aux particuliers comme aux professionnels.
+                    </p>
+                    
+                    <!-- Boutons d'accès aux "pages" de catégories -->
+                    <div class="pt-4">
+                        <p class="text-xs uppercase tracking-widest text-brand-lightgreen font-bold mb-3 text-center lg:text-left">Choisissez une catégorie pour commander :</p>
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+                            <button onclick="showSection('cereales')" class="px-5 py-3.5 bg-white text-brand-darkgreen hover:bg-brand-lightgreen font-bold rounded-xl shadow-md transition-all text-sm flex items-center">
+                                <i class="fa-solid fa-bowl-rice mr-2 text-brand-orange"></i> Céréales & Dérivés
+                            </button>
+                            <button onclick="showSection('legumineuses')" class="px-5 py-3.5 bg-white text-brand-darkgreen hover:bg-brand-lightgreen font-bold rounded-xl shadow-md transition-all text-sm flex items-center">
+                                <i class="fa-solid fa-seedling mr-2 text-brand-orange"></i> Légumineuses
+                            </button>
+                            <button onclick="showSection('condiments')" class="px-5 py-3.5 bg-white text-brand-darkgreen hover:bg-brand-lightgreen font-bold rounded-xl shadow-md transition-all text-sm flex items-center">
+                                <i class="fa-solid fa-jar mr-2 text-brand-orange"></i> Pâtes & Condiments
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5 hidden lg:flex justify-center">
+                    <div class="relative w-80 h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/14882348487800454443_0" alt="Plat traditionnel sénégalais" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                            <h3 class="font-playfair text-lg font-bold text-white">Thiakry traditionnel crémeux</h3>
+                            <p class="text-xs text-stone-300">Préparé à base de notre mil local purifié.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- SECTION ENGAGEMENTS -->
-    <section id="engagements" class="py-12 bg-white border-b border-stone-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="flex items-start space-x-4">
-                    <div class="p-3 bg-brand-lightgreen/40 text-brand-darkgreen rounded-lg shrink-0">
-                        <i class="fa-solid fa-leaf text-2xl"></i>
+        <!-- SECTION ENGAGEMENTS -->
+        <section class="py-12 bg-white border-b border-stone-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-brand-lightgreen/40 text-brand-darkgreen rounded-lg shrink-0">
+                            <i class="fa-solid fa-leaf text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">100% Naturel</h4>
+                            <p class="text-sm text-slate-500 mt-1">Aucun additif chimique ni conservateur.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-slate-900">100% Naturel</h4>
-                        <p class="text-sm text-slate-500 mt-1">Sans additifs ni conservateurs artificiels.</p>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-brand-lightgreen/40 text-brand-darkgreen rounded-lg shrink-0">
+                            <i class="fa-solid fa-weight-scale text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">De 500g à 50Kg</h4>
+                            <p class="text-sm text-slate-500 mt-1">Sachets familiaux ou gros sacs de stockage.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-start space-x-4">
-                    <div class="p-3 bg-brand-lightgreen/40 text-brand-darkgreen rounded-lg shrink-0">
-                        <i class="fa-solid fa-weight-scale text-2xl"></i>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-brand-lightgreen/40 text-brand-darkgreen rounded-lg shrink-0">
+                            <i class="fa-solid fa-globe text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Livraison Mondiale</h4>
+                            <p class="text-sm text-slate-500 mt-1">Expédition sécurisée depuis Bambey partout.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-slate-900">Format sur-mesure</h4>
-                        <p class="text-sm text-slate-500 mt-1">Du sachet de 500g au grand sac de gros de 50kg.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-4">
-                    <div class="p-3 bg-brand-lightgreen/40 text-brand-darkgreen rounded-lg shrink-0">
-                        <i class="fa-solid fa-handshake text-2xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-slate-900">Soutien Local</h4>
-                        <p class="text-sm text-slate-500 mt-1">Céréales issues directement de nos agriculteurs.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-4">
-                    <div class="p-3 bg-brand-lightgreen/40 text-brand-darkgreen rounded-lg shrink-0">
-                        <i class="fa-solid fa-truck-ramp-box text-2xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-slate-900">Commande WhatsApp</h4>
-                        <p class="text-sm text-slate-500 mt-1">Validation immédiate et livraison rapide chez vous.</p>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-brand-lightgreen/40 text-brand-darkgreen rounded-lg shrink-0">
+                            <i class="fa-solid fa-truck-ramp-box text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Panier WhatsApp</h4>
+                            <p class="text-sm text-slate-500 mt-1">Remplissez votre panier et validez en un clic.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- ESPACE CATALOGUE DE LA BOUTIQUE -->
-    <main id="boutique" class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- VUE DÉDIÉE PAR CATÉGORIE (NOTRE CATALOGUE IMMERSIF) -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="font-playfair text-3xl sm:text-4xl font-extrabold text-brand-darkgreen">Notre Catalogue en Ligne</h2>
-            <p class="text-slate-500 mt-3">Choisissez vos produits préférés, définissez le format de votre choix et passez votre commande globale en toute sérénité.</p>
-            <div class="w-16 h-1 bg-brand-orange mx-auto mt-5 rounded-full"></div>
+        <!-- Bouton retour à l'accueil (affiché uniquement en mode filtré) -->
+        <div id="back-to-home-btn" class="hidden mb-6">
+            <button onclick="showSection('all')" class="inline-flex items-center text-sm font-bold text-brand-green hover:text-brand-darkgreen bg-white border border-stone-200 px-4 py-2 rounded-xl shadow-sm transition">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Retour à la page d'accueil
+            </button>
         </div>
 
-        <!-- 1. SECTION : CÉRÉALES & DÉRIVÉS -->
-        <section id="cereales" class="mb-16">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="text-2xl"><i class="fa-solid fa-bowl-rice text-brand-green"></i></span>
-                <h3 class="font-playfair text-2xl font-bold text-brand-darkgreen">Céréales & Dérivés de Mil</h3>
-                <div class="flex-grow h-px bg-slate-200"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="section-cereales-grid">
-                <!-- Généré dynamiquement en JS -->
-            </div>
+        <div id="category-title-area" class="text-center max-w-2xl mx-auto mb-12 hidden">
+            <h2 id="current-category-name" class="font-playfair text-3xl sm:text-4xl font-extrabold text-brand-darkgreen">Catégorie</h2>
+            <p class="text-slate-500 mt-2">Découvrez nos formats de haute qualité, sélectionnez vos poids et composez votre panier.</p>
+            <div class="w-16 h-1 bg-brand-orange mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- CONTENEURS DES PAGES DYNAMIQUES -->
+        <!-- 1. PAGE : CÉRÉALES -->
+        <section id="page-cereales" class="category-page hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="section-cereales-grid"></div>
         </section>
 
-        <!-- 2. SECTION : LÉGUMINEUSES & GRAINES -->
-        <section id="legumineuses" class="mb-16">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="text-2xl"><i class="fa-solid fa-seedling text-brand-green"></i></span>
-                <h3 class="font-playfair text-2xl font-bold text-brand-darkgreen">Légumineuses & Épices</h3>
-                <div class="flex-grow h-px bg-slate-200"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="section-legumineuses-grid">
-                <!-- Généré dynamiquement en JS -->
-            </div>
+        <!-- 2. PAGE : LÉGUMINEUSES -->
+        <section id="page-legumineuses" class="category-page hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="section-legumineuses-grid"></div>
         </section>
 
-        <!-- 3. SECTION : PÂTES & CONDIMENTS -->
-        <section id="condiments" class="mb-16">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="text-2xl"><i class="fa-solid fa-jar text-brand-green"></i></span>
-                <h3 class="font-playfair text-2xl font-bold text-brand-darkgreen">Pâtes & Condiments</h3>
-                <div class="flex-grow h-px bg-slate-200"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="section-condiments-grid">
-                <!-- Généré dynamiquement en JS -->
-            </div>
+        <!-- 3. PAGE : CONDIMENTS -->
+        <section id="page-condiments" class="category-page hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="section-condiments-grid"></div>
         </section>
-
     </main>
 
     <!-- TIROIR LATÉRAL PANIER (DRAWER) -->
     <div id="cart-drawer" class="fixed inset-0 z-50 pointer-events-none transition-all duration-300">
-        <!-- Fond sombre cliquable pour refermer -->
         <div id="cart-overlay" onclick="toggleCart(false)" class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300 pointer-events-none"></div>
-        
-        <!-- Conteneur Panier -->
         <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-2xl flex flex-col translate-x-full transition-transform duration-300 pointer-events-auto h-full">
-            <!-- Header du Panier -->
             <div class="p-6 border-b border-stone-200 flex items-center justify-between bg-brand-darkgreen text-white">
                 <div class="flex items-center space-x-3">
                     <i class="fa-solid fa-basket-shopping text-xl text-brand-lightgreen"></i>
                     <h3 class="font-bold text-lg">Votre commande</h3>
                 </div>
-                <button onclick="toggleCart(false)" class="text-white hover:text-stone-300 focus:outline-none p-1">
-                    <i class="fa-solid fa-xmark text-xl"></i>
-                </button>
+                <button onclick="toggleCart(false)" class="text-white hover:text-stone-300 p-1"><i class="fa-solid fa-xmark text-xl"></i></button>
             </div>
             
-            <!-- Corps du Panier (Items) -->
             <div id="cart-items-container" class="flex-grow p-6 overflow-y-auto custom-scrollbar space-y-4">
-                <!-- Vide par défaut -->
                 <div id="cart-empty-state" class="h-full flex flex-col items-center justify-center text-center space-y-4 py-12">
-                    <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center text-stone-400">
-                        <i class="fa-solid fa-cart-shopping text-2xl"></i>
-                    </div>
+                    <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center text-stone-400"><i class="fa-solid fa-cart-shopping text-2xl"></i></div>
                     <div>
                         <p class="font-semibold text-stone-700">Votre panier est vide</p>
-                        <p class="text-xs text-stone-400 mt-1">Ajoutez des produits de notre catalogue pour démarrer votre panier de commande.</p>
+                        <p class="text-xs text-stone-400 mt-1">Ajoutez des articles pour démarrer votre bon de commande.</p>
                     </div>
-                    <button onclick="toggleCart(false)" class="px-5 py-2 bg-brand-green/10 text-brand-green font-bold text-sm rounded-lg hover:bg-brand-green/15 transition-all">
-                        Retourner aux produits
-                    </button>
                 </div>
-                
-                <div id="cart-active-items" class="hidden space-y-4">
-                    <!-- Généré dynamiquement en JS -->
-                </div>
+                <div id="cart-active-items" class="hidden space-y-4"></div>
             </div>
             
-            <!-- Pied du Panier (Totaux et Checkout) -->
             <div id="cart-footer" class="p-6 border-t border-stone-200 bg-stone-50 space-y-4 hidden">
-                <div class="space-y-1.5">
-                    <div class="flex justify-between text-sm text-slate-500">
-                        <span>Nombre d'articles :</span>
-                        <span id="cart-item-count" class="font-medium text-slate-800">0</span>
-                    </div>
-                    <div class="flex justify-between text-base font-bold text-slate-800 pt-2 border-t border-stone-200">
-                        <span>Total estimé :</span>
-                        <span id="cart-total-price" class="text-brand-orange text-lg">0 FCFA</span>
-                    </div>
+                <div class="flex justify-between text-base font-bold text-slate-800 pt-2">
+                    <span>Total global :</span>
+                    <span id="cart-total-price" class="text-brand-orange text-lg">0 FCFA</span>
                 </div>
-                
-                <div class="pt-2">
-                    <button onclick="validerCommande()" class="w-full py-4 bg-brand-orange hover:bg-brand-orange/95 text-white font-bold rounded-xl shadow-lg transition-all flex items-center justify-center space-x-3 hover:-translate-y-0.5">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                        <span>Confirmer sur WhatsApp</span>
-                    </button>
-                    <p class="text-center text-[11px] text-slate-400 mt-3">
-                        <i class="fa-solid fa-lock mr-1"></i> Commande sécurisée sans paiement en ligne obligatoire.
-                    </p>
-                </div>
+                <button onclick="validerCommande()" class="w-full py-4 bg-brand-orange hover:bg-brand-orange/95 text-white font-bold rounded-xl shadow-lg transition-all flex items-center justify-center space-x-3">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Envoyer la commande sur WhatsApp</span>
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- TOAST DE NOTIFICATION AJOUT -->
+    <!-- NOTIFICATION TOAST -->
     <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-brand-darkgreen text-white px-5 py-3.5 rounded-xl shadow-2xl flex items-center space-x-3 text-sm font-semibold pointer-events-none opacity-0 scale-95 transition-all duration-300">
-        <span class="w-6 h-6 bg-brand-lightgreen/20 rounded-full flex items-center justify-center text-brand-lightgreen">
-            <i class="fa-solid fa-check text-xs"></i>
-        </span>
-        <span id="toast-text">Produit ajouté avec succès !</span>
+        <span class="w-6 h-6 bg-brand-lightgreen/20 rounded-full flex items-center justify-center text-brand-lightgreen"><i class="fa-solid fa-check text-xs"></i></span>
+        <span id="toast-text">Ajouté au panier !</span>
     </div>
 
-    <!-- FOOTER DU SITE -->
-    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="space-y-4">
                 <span class="font-playfair text-2xl font-black tracking-wide text-white block">NDIAYE LOCAL</span>
-                <p class="text-sm text-stone-400 leading-relaxed max-w-sm">
-                    La valorisation de nos terres sénégalaises à travers des produits céréaliers de haute qualité, conditionnés dans des formats pensés pour tous les ménages et commerces.
+                <p class="text-sm text-stone-400 leading-relaxed">
+                    Depuis Bambey, nous valorisons le savoir-faire agricole sénégalais à travers le monde entier. Des produits purs, sains et contrôlés.
                 </p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Catégories de Produits</h4>
+                <h4 class="text-white font-bold mb-4">Nos Spécialités</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#cereales" class="hover:text-white transition">Céréales de Mil (Thiéré, Sankal...)</a></li>
-                    <li><a href="#legumineuses" class="hover:text-white transition">Légumineuses saines (Niébé...)</a></li>
-                    <li><a href="#condiments" class="hover:text-white transition">Condiments & Arachides (Tiguadégué...)</a></li>
+                    <li><button onclick="showSection('cereales')" class="hover:text-white transition">Céréales de Mil (Thiéré, Thiakry, Sankal)</button></li>
+                    <li><button onclick="showSection('legumineuses')" class="hover:text-white transition">Légumineuses saines (Niébé)</button></li>
+                    <li><button onclick="showSection('condiments')" class="hover:text-white transition">Condiments premium (Tiguadégué)</button></li>
                 </ul>
             </div>
             <div class="space-y-4">
-                <h4 class="text-white font-bold">Contactez-nous</h4>
-                <p class="text-sm">Nous répondons à toutes vos questions sur WhatsApp pour la livraison.</p>
+                <h4 class="text-white font-bold">Siège & Expéditions</h4>
+                <p class="text-sm"><i class="fa-solid fa-location-dot text-brand-orange mr-2"></i> Quartier Escale, Bambey, Sénégal</p>
                 <div class="flex items-center space-x-3 text-white">
                     <span class="p-2 bg-stone-800 rounded-lg"><i class="fa-solid fa-phone text-brand-orange"></i></span>
-                    <span class="font-semibold text-sm">+221 77 123 45 67</span>
+                    <span class="font-semibold text-sm">+221 77 868 88 30</span>
                 </div>
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-stone-800 text-center text-xs text-stone-500">
-            &copy; 2026 NDIAYE LOCAL. Tous droits réservés. Réalisé avec ❤️ pour nos artisans locaux.
+            &copy; 2026 NDIAYE LOCAL. Tous droits réservés.
         </div>
     </footer>
 
-    <!-- LOGIQUE JAVASCRIPT ULTRA-DYNAMIQUE -->
+    <!-- LOGIQUE JAVASCRIPT -->
     <script>
-        // CONFIGURATION DU NUMÉRO DE TÉLÉPHONE WHATSAPP
-        // Remplace par ton numéro réel au format international sans le "+" (ex: "221771234567" pour le Sénégal)
-        const WHATSAPP_PHONE = "221771234567"; 
+        // CONFIGURATION OFFICIELLE DE TON BUSINESS
+        const WHATSAPP_PHONE = "221778688830"; 
 
-        // BASE DE DONNÉES DES PRODUITS AVEC LEURS GRILLES DE PRIX (500g à 50kg)
+        // CATALOGUE PRODUIT COMPLET AVEC COÛTS DÉGRESSIFS DE 500G À 50KG
         const products = [
             {
                 id: "thiere",
-                name: "Thiéré",
+                name: "Thiéré (Couscous de mil)",
                 category: "cereales",
-                description: "Le délicieux couscous de mil sénégalais, roulé à la main, idéal pour vos dîners et fêtes.",
+                description: "Le délicieux couscous de mil sénégalais traditionnel, roulé à la main, parfait et digeste.",
                 image: "http://googleusercontent.com/image_collection/image_retrieval/4967916841825074765_0",
-                prices: {
-                    "500g": 1500,
-                    "1kg": 2800,
-                    "5kg": 13500,
-                    "10kg": 26000,
-                    "25kg": 62500,
-                    "50kg": 120000
-                }
+                prices: { "500g": 1500, "1kg": 2800, "5kg": 13500, "10kg": 26000, "25kg": 62500, "50kg": 120000 }
             },
             {
                 id: "thiakry",
-                name: "Thiakry",
+                name: "Thiakry (Granulés de mil)",
                 category: "cereales",
-                description: "Granulés de mil de haute qualité cuits à la vapeur, l'ingrédient principal de votre dessert préféré.",
+                description: "Granulés de mil de premier choix cuits à la vapeur, parfaits pour vos mélanges au lait.",
                 image: "http://googleusercontent.com/image_collection/image_retrieval/14882348487800454443_0",
-                prices: {
-                    "500g": 1200,
-                    "1kg": 2200,
-                    "5kg": 10500,
-                    "10kg": 20000,
-                    "25kg": 48000,
-                    "50kg": 90000
-                }
+                prices: { "500g": 1200, "1kg": 2200, "5kg": 10500, "10kg": 20000, "25kg": 48000, "50kg": 90000 }
             },
             {
                 id: "sankal",
                 name: "Sankal",
                 category: "cereales",
-                description: "Brisures de mil purifiées, indispensables pour le bon thiakry traditionnel fait maison ou le lakh.",
+                description: "Brisures de mil purifiées de Bambey, idéales pour préparer le lakh traditionnel ou le thiakry épais.",
                 image: "http://googleusercontent.com/image_collection/image_retrieval/8671572117730930785_0",
-                prices: {
-                    "500g": 600,
-                    "1kg": 1000,
-                    "5kg": 4800,
-                    "10kg": 9200,
-                    "25kg": 22000,
-                    "50kg": 42000
-                }
+                prices: { "500g": 600, "1kg": 1000, "5kg": 4800, "10kg": 9200, "25kg": 22000, "50kg": 42000 }
             },
             {
                 id: "niebe",
-                name: "Niébé",
+                name: "Niébé (Haricot local)",
                 category: "legumineuses",
-                description: "Haricots cornilles de premier choix locaux, riches en protéines végétales et en fibres.",
+                description: "Haricots cornilles riches en protéines végétales et rigoureusement triés pour une cuisine saine.",
                 image: "http://googleusercontent.com/image_collection/image_retrieval/16061553396271792921_0",
-                prices: {
-                    "500g": 700,
-                    "1kg": 1300,
-                    "5kg": 6200,
-                    "10kg": 12000,
-                    "25kg": 28500,
-                    "50kg": 55000
-                }
+                prices: { "500g": 700, "1kg": 1300, "5kg": 6200, "10kg": 12000, "25kg": 28500, "50kg": 55000 }
             },
             {
                 id: "arachide_poudre",
                 name: "Arachide en poudre",
                 category: "condiments",
-                description: "Poudre fine d'arachides grillées de notre région, parfaite pour aromatiser vos plats locaux.",
+                description: "Poudre extra-fine d'arachides de la région, torréfiées avec soin pour sublimer vos sauces de riz.",
                 image: "http://googleusercontent.com/image_collection/image_retrieval/2179846533683002479_0",
-                prices: {
-                    "500g": 1500,
-                    "1kg": 2800,
-                    "5kg": 13500,
-                    "10kg": 26000,
-                    "25kg": 62500,
-                    "50kg": 120000
-                }
+                prices: { "500g": 1500, "1kg": 2800, "5kg": 13500, "10kg": 26000, "25kg": 62500, "50kg": 120000 }
             },
             {
                 id: "tiguadege",
-                name: "Tiguadégué",
+                name: "Tiguadégué (Pâte d'arachide)",
                 category: "condiments",
-                description: "Pâte de d'arachide premium de fabrication artisanale, idéale pour la sauce Mafé.",
+                description: "Pâte d'arachide artisanale d'une onctuosité incomparable, idéale pour réussir à coup sûr votre Mafé.",
                 image: "http://googleusercontent.com/image_collection/image_retrieval/10741805376329937308_0",
-                prices: {
-                    "500g": 1800,
-                    "1kg": 3400,
-                    "5kg": 16500,
-                    "10kg": 32000,
-                    "25kg": 75000,
-                    "50kg": 145000
-                }
+                prices: { "500g": 1800, "1kg": 3400, "5kg": 16500, "10kg": 32000, "25kg": 75000, "50kg": 145000 }
             }
         ];
 
-        // État interne de l'application (le panier)
         let cart = [];
 
-        // INITIALISATION DES PRODUITS SUR LA PAGE
+        // NAVIGATION DYNAMIQUE COMME SUR DE NOUVELLES PAGES
+        function showSection(category) {
+            const landingView = document.getElementById('main-landing-view');
+            const backBtn = document.getElementById('back-to-home-btn');
+            const titleArea = document.getElementById('category-title-area');
+            const catNameDisplay = document.getElementById('current-category-name');
+            const pages = document.querySelectorAll('.category-page');
+            
+            // Masquer toutes les pages spécifiques par défaut
+            pages.forEach(p => p.classList.add('hidden'));
+
+            if (category === 'all') {
+                // Afficher la page d'accueil par défaut au complet
+                landingView.classList.remove('hidden');
+                backBtn.classList.add('hidden');
+                titleArea.classList.add('hidden');
+                // Réafficher toutes les sections en même temps sur l'accueil général
+                pages.forEach(p => p.classList.remove('hidden'));
+            } else {
+                // Masquer le gros bloc d'accueil hero pour simuler une nouvelle page claire
+                landingView.classList.add('hidden');
+                backBtn.classList.remove('hidden');
+                titleArea.classList.remove('hidden');
+                
+                // Configurer le titre de la page courante
+                if(category === 'cereales') catNameDisplay.textContent = "Céréales & Dérivés de Mil";
+                if(category === 'legumineuses') catNameDisplay.textContent = "Légumineuses & Graines";
+                if(category === 'condiments') catNameDisplay.textContent = "Pâtes & Condiments";
+
+                // Afficher la page de la catégorie cliquée
+                document.getElementById(`page-${category}`).classList.remove('hidden');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // INITIALISATION DU CATALOGUE VISUEL
         function initProducts() {
             products.forEach(p => {
-                const gridId = `section-${p.category}-grid`;
-                const container = document.getElementById(gridId);
-                
+                const container = document.getElementById(`section-${p.category}-grid`);
                 if (container) {
-                    const defaultSize = "500g";
-                    const defaultPrice = p.prices[defaultSize];
-                    
-                    // Création de l'option selecteur de poids
                     let weightOptions = '';
                     Object.keys(p.prices).forEach(size => {
                         weightOptions += `<option value="${size}">${size}</option>`;
                     });
 
                     const card = document.createElement('div');
-                    card.className = "bg-white rounded-2xl overflow-hidden border border-stone-200/80 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col";
+                    card.className = "bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col";
                     card.innerHTML = `
                         <div class="relative h-56 bg-stone-100 overflow-hidden shrink-0">
                             <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover">
-                            <span class="absolute top-4 right-4 bg-brand-lightgreen text-brand-darkgreen px-3 py-1.5 rounded-full text-xs font-black uppercase tracking-wide">Premium</span>
+                            <span class="absolute top-4 right-4 bg-brand-lightgreen text-brand-darkgreen px-3 py-1 text-xs font-bold rounded-full uppercase">Terroir</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h4 class="font-playfair text-xl font-bold text-slate-900">${p.name}</h4>
                             <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed flex-grow">${p.description}</p>
                             
-                            <!-- Sélecteur de format -->
-                            <div class="mt-5 space-y-2">
-                                <label class="text-[11px] font-extrabold uppercase tracking-widest text-slate-400 block">Choisir le Format d'achat :</label>
-                                <select id="select-weight-${p.id}" onchange="updatePrice('${p.id}')" class="w-full bg-stone-50 border border-stone-200 text-sm font-semibold rounded-xl px-4 py-3 focus:outline-none focus:border-brand-green/50 cursor-pointer">
+                            <div class="mt-4 space-y-1.5">
+                                <label class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Format recherché :</label>
+                                <select id="select-weight-${p.id}" onchange="updatePrice('${p.id}')" class="w-full bg-stone-50 border border-stone-200 text-sm font-semibold rounded-xl px-3 py-2.5 cursor-pointer focus:outline-none">
                                     ${weightOptions}
                                 </select>
                             </div>
                             
-                            <!-- Affichage du prix mis à jour dynamiquement -->
-                            <div class="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between">
-                                <span class="text-xs text-slate-400 font-bold">Prix</span>
-                                <span id="price-display-${p.id}" class="text-xl font-black text-brand-orange font-jakarta">${formatNumber(defaultPrice)} FCFA</span>
+                            <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+                                <span class="text-xs text-slate-400 font-bold">Tarif</span>
+                                <span id="price-display-${p.id}" class="text-lg font-black text-brand-orange">${formatNumber(p.prices["500g"])} FCFA</span>
                             </div>
                             
-                            <button onclick="addToCart('${p.id}')" class="mt-4 w-full py-3.5 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl shadow-md transition-all flex items-center justify-center space-x-2">
+                            <button onclick="addToCart('${p.id}')" class="mt-4 w-full py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl shadow-sm transition-all flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Ajouter au panier</span>
                             </button>
@@ -477,54 +419,33 @@
             });
         }
 
-        // FORMATTER LE NOMBRE EN MONNAIE (ex: 120000 -> 120 000)
-        function formatNumber(num) {
-            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-        }
+        function formatNumber(num) { return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
 
-        // METTRE À JOUR LE PRIX SUR LA FICHE PRODUIT EN TEMPS RÉEL
         function updatePrice(productId) {
             const product = products.find(p => p.id === productId);
             const select = document.getElementById(`select-weight-${productId}`);
             const priceDisplay = document.getElementById(`price-display-${productId}`);
-            
             if (product && select && priceDisplay) {
-                const selectedSize = select.value;
-                const newPrice = product.prices[selectedSize];
-                priceDisplay.textContent = `${formatNumber(newPrice)} FCFA`;
+                priceDisplay.textContent = `${formatNumber(product.prices[select.value])} FCFA`;
             }
         }
 
-        // AJOUTER UN PRODUIT AU PANIER
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
             const select = document.getElementById(`select-weight-${productId}`);
-            
             if (product && select) {
                 const weight = select.value;
                 const price = product.prices[weight];
+                const existing = cart.find(item => item.id === productId && item.weight === weight);
                 
-                // Recherche si le même produit de même poids est déjà au panier
-                const existingItemIndex = cart.findIndex(item => item.id === productId && item.weight === weight);
-                
-                if (existingItemIndex > -1) {
-                    cart[existingItemIndex].quantity += 1;
-                } else {
-                    cart.push({
-                        id: product.id,
-                        name: product.name,
-                        weight: weight,
-                        price: price,
-                        quantity: 1
-                    });
-                }
+                if (existing) { existing.quantity += 1; } 
+                else { cart.push({ id: product.id, name: product.name, weight: weight, price: price, quantity: 1 }); }
                 
                 updateCartUI();
-                showToast(`Ajouté : ${product.name} (${weight}) au panier !`);
+                showToast(`Ajouté : ${product.name} (${weight})`);
             }
         }
 
-        // AFFICHER LA PETITE NOTIFICATION TOAST
         function showToast(text) {
             const toast = document.getElementById('toast');
             const toastText = document.getElementById('toast-text');
@@ -532,144 +453,94 @@
                 toastText.textContent = text;
                 toast.classList.remove('opacity-0', 'scale-95');
                 toast.classList.add('opacity-100', 'scale-100');
-                
                 setTimeout(() => {
                     toast.classList.remove('opacity-100', 'scale-100');
                     toast.classList.add('opacity-0', 'scale-95');
-                }, 2500);
+                }, 2000);
             }
         }
 
-        // ACTIVER / DEACTIVIER L'OUVERTURE DU PANIER LATÉRAL
         function toggleCart(isOpen) {
             const drawer = document.getElementById('cart-drawer');
             const overlay = document.getElementById('cart-overlay');
-            const drawerContent = drawer.querySelector('.translate-x-full, .translate-x-0');
-            
             if (isOpen) {
                 drawer.classList.remove('pointer-events-none');
                 overlay.classList.remove('opacity-0', 'pointer-events-none');
-                overlay.classList.add('opacity-100', 'pointer-events-auto');
                 drawer.children[1].classList.remove('translate-x-full');
-                drawer.children[1].classList.add('translate-x-0');
             } else {
                 drawer.classList.add('pointer-events-none');
-                overlay.classList.remove('opacity-100', 'pointer-events-auto');
                 overlay.classList.add('opacity-0', 'pointer-events-none');
-                drawer.children[1].classList.remove('translate-x-0');
                 drawer.children[1].classList.add('translate-x-full');
             }
         }
 
-        // CHANGER LA QUANTITÉ D'UN ARTICLE AU PANIER
         function changeQty(index, change) {
             if (cart[index]) {
                 cart[index].quantity += change;
-                if (cart[index].quantity <= 0) {
-                    cart.splice(index, 1);
-                }
+                if (cart[index].quantity <= 0) cart.splice(index, 1);
                 updateCartUI();
             }
         }
 
-        // METTRE À JOUR LE CONTENU ET L'ICÔNE DU PANIER
         function updateCartUI() {
             const badge = document.getElementById('cart-badge');
             const headerTotal = document.getElementById('cart-header-total');
             const emptyState = document.getElementById('cart-empty-state');
             const activeItems = document.getElementById('cart-active-items');
             const footer = document.getElementById('cart-footer');
-            const itemCount = document.getElementById('cart-item-count');
             const totalPrice = document.getElementById('cart-total-price');
             
-            // Calcul du total des articles et du prix total
-            let totalQty = 0;
-            let sumPrice = 0;
-            
-            cart.forEach(item => {
-                totalQty += item.quantity;
-                sumPrice += (item.price * item.quantity);
-            });
+            let totalQty = 0, sumPrice = 0;
+            cart.forEach(item => { totalQty += item.quantity; sumPrice += (item.price * item.quantity); });
 
-            // Badge du panier
             if (totalQty > 0) {
-                badge.textContent = totalQty;
-                badge.classList.remove('scale-0');
-                badge.classList.add('scale-100');
-            } else {
-                badge.classList.remove('scale-100');
-                badge.classList.add('scale-0');
-            }
+                badge.textContent = totalQty; badge.classList.remove('scale-0');
+            } else { badge.classList.add('scale-0'); }
             
             headerTotal.textContent = `${formatNumber(sumPrice)} FCFA`;
             
-            // Si le panier est vide
             if (cart.length === 0) {
-                emptyState.classList.remove('hidden');
-                activeItems.classList.add('hidden');
-                footer.classList.add('hidden');
+                emptyState.classList.remove('hidden'); activeItems.classList.add('hidden'); footer.classList.add('hidden');
             } else {
-                emptyState.classList.add('hidden');
-                activeItems.classList.remove('hidden');
-                footer.classList.remove('hidden');
-                
-                // Remplissage des items
+                emptyState.classList.add('hidden'); activeItems.classList.remove('hidden'); footer.classList.remove('hidden');
                 activeItems.innerHTML = '';
                 cart.forEach((item, index) => {
-                    const itemDiv = document.createElement('div');
-                    itemDiv.className = "flex items-center space-x-4 bg-stone-50 p-4 rounded-xl border border-stone-200/60";
-                    itemDiv.innerHTML = `
-                        <div class="flex-grow">
-                            <h4 class="font-bold text-slate-800 text-sm">${item.name}</h4>
-                            <p class="text-xs text-slate-400 font-semibold mt-0.5">Format : ${item.weight}</p>
-                            <span class="text-xs font-bold text-brand-orange mt-2 block">${formatNumber(item.price)} FCFA / un.</span>
+                    const div = document.createElement('div');
+                    div.className = "flex items-center justify-between bg-stone-50 p-3 rounded-xl border border-stone-200 text-xs";
+                    div.innerHTML = `
+                        <div>
+                            <h4 class="font-bold text-slate-800">${item.name}</h4>
+                            <p class="text-stone-400 mt-0.5">Format: ${item.weight}</p>
+                            <span class="text-brand-orange font-bold mt-1 block">${formatNumber(item.price)} F</span>
                         </div>
-                        <div class="flex flex-col items-end space-y-2 shrink-0">
-                            <div class="flex items-center space-x-2 bg-white border border-stone-200 rounded-lg p-1">
-                                <button onclick="changeQty(${index}, -1)" class="w-6 h-6 flex items-center justify-center text-slate-500 hover:bg-stone-100 rounded-md"><i class="fa-solid fa-minus text-[10px]"></i></button>
-                                <span class="text-xs font-bold w-4 text-center text-slate-700">${item.quantity}</span>
-                                <button onclick="changeQty(${index}, 1)" class="w-6 h-6 flex items-center justify-center text-slate-500 hover:bg-stone-100 rounded-md"><i class="fa-solid fa-plus text-[10px]"></i></button>
-                            </div>
-                            <span class="text-sm font-black text-slate-800">${formatNumber(item.price * item.quantity)} FCFA</span>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="changeQty(${index}, -1)" class="w-5 h-5 bg-white border rounded flex items-center justify-center font-bold text-slate-500">-</button>
+                            <span class="font-bold text-slate-700">${item.quantity}</span>
+                            <button onclick="changeQty(${index}, 1)" class="w-5 h-5 bg-white border rounded flex items-center justify-center font-bold text-slate-500">+</button>
                         </div>
                     `;
-                    activeItems.appendChild(itemDiv);
+                    activeItems.appendChild(div);
                 });
-                
-                itemCount.textContent = totalQty;
                 totalPrice.textContent = `${formatNumber(sumPrice)} FCFA`;
             }
         }
 
-        // ACTION DE COMMANDE WHATSAPP GLOBALE
         function validerCommande() {
             if (cart.length === 0) return;
-            
-            let message = "Bonjour NDIAYE LOCAL ! 🌾\nJe souhaite passer une commande avec les détails suivants :\n\n";
-            let grandTotal = 0;
-            
-            cart.forEach((item, index) => {
-                const totalItemPrice = item.price * item.quantity;
-                grandTotal += totalItemPrice;
-                message += `${index + 1}) *${item.name}*\n`;
-                message += `   - Format : ${item.weight}\n`;
-                message += `   - Quantité : ${item.quantity}\n`;
-                message += `   - Prix : ${formatNumber(totalItemPrice)} FCFA\n\n`;
+            let msg = "Bonjour NDIAYE LOCAL (Bambey) ! 🌾\nJe souhaite valider une commande pour expédition :\n\n";
+            let total = 0;
+            cart.forEach((item, i) => {
+                let currentTotal = item.price * item.quantity;
+                total += currentTotal;
+                msg += `${i + 1}) *${item.name}*\n   - Format : ${item.weight}\n   - Quantité : ${item.quantity}\n   - Sous-total : ${formatNumber(currentTotal)} FCFA\n\n`;
             });
-            
-            message += `-------------------------\n`;
-            message += `*TOTAL ESTIMÉ : ${formatNumber(grandTotal)} FCFA*\n\n`;
-            message += `Merci de m'indiquer vos modalités pour la livraison !`;
-            
-            // Envoi de la commande à l'API de WhatsApp
-            const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
+            msg += `-------------------------\n*TOTAL COMMANDE : ${formatNumber(total)} FCFA*\n\nMerci de me recontacter pour finaliser l'adresse de livraison ! 🌍`;
+            window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
-        // Chargement initial au démarrage
         window.addEventListener('DOMContentLoaded', () => {
             initProducts();
-            updateCartUI();
+            showSection('all'); // Affiche l'accueil global complet au démarrage
         });
     </script>
 </body>
