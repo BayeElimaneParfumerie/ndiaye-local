@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NDIAYE LOCAL - Le meilleur du terroir sénégalais</title>
+    <!-- Tailwind CSS pour un design pro et réactif -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script>
@@ -24,7 +27,10 @@
                             lightbg: '#fcfbf7'
                         }
                     },
-                    fontFamily: { playfair: ['"Playfair Display"', 'serif'], jakarta: ['"Plus Jakarta Sans"', 'sans-serif'] }
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        jakarta: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
                 }
             }
         }
@@ -32,10 +38,11 @@
 </head>
 <body class="bg-brand-lightbg font-jakarta text-slate-800 antialiased min-h-screen flex flex-col">
 
+    <!-- BARRE DE NAVIGATION -->
     <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200/80 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 bg-brand-darkgreen rounded-xl flex items-center justify-center text-white shadow-md">
+                <div class="w-10 h-10 bg-brand-darkgreen rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-all">
                     <i class="fa-solid fa-wheat-awn text-xl text-brand-lightgreen"></i>
                 </div>
                 <div>
@@ -47,44 +54,51 @@
             <div class="hidden md:flex items-center space-x-8 text-sm font-bold tracking-wide text-slate-600">
                 <a href="cereales.html" class="hover:text-brand-green transition">Céréales & Dérivés</a>
                 <a href="legumineuses.html" class="hover:text-brand-green transition">Légumineuses</a>
-                <a href="condiments.html" class="hover:text-brand-green transition">Pâtes, Bissap & Moringa</a>
+                <a href="condiments.html" class="hover:text-brand-green transition">Pâtes, Condiments & Infusions</a>
             </div>
+            
+            <a href="https://wa.me/221778688830" target="_blank" class="px-4 py-2 bg-brand-green hover:bg-brand-darkgreen text-white text-xs font-bold rounded-lg transition flex items-center space-x-1">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>Nous contacter</span>
+            </a>
         </div>
     </nav>
 
-    <div class="bg-brand-terracotta text-white py-2 text-center text-xs font-bold tracking-wider px-4">
-        <i class="fa-solid fa-globe mr-2"></i> Basé à Bambey — Nous livrons partout au Sénégal et dans le Monde ! ✈️
+    <!-- BANDEAU INFOS LIVRAISON -->
+    <div class="bg-brand-terracotta text-white py-2.5 text-center text-xs font-bold tracking-wider px-4">
+        <i class="fa-solid fa-globe mr-2 animate-pulse"></i> Depuis Bambey — Nous livrons partout au Sénégal et dans le Monde ! ✈️
     </div>
 
-    <header class="relative bg-brand-darkgreen text-white overflow-hidden py-20 lg:py-28 flex-grow flex items-center">
+    <!-- HERO SECTION -->
+    <header class="relative bg-brand-darkgreen text-white overflow-hidden py-20 lg:py-28 flex items-center">
         <div class="absolute inset-0 z-0 opacity-25">
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/8252814092474362685_0" alt="Terroir" class="w-full h-full object-cover">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/8252814092474362685_0" alt="Terroir et Agriculture" class="w-full h-full object-cover">
         </div>
         <div class="absolute inset-0 bg-gradient-to-r from-brand-darkgreen via-brand-darkgreen/95 to-transparent z-10"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="lg:col-span-8 space-y-6 text-center lg:text-left">
                 <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-brand-lightgreen/10 text-brand-lightgreen border border-brand-lightgreen/20">
-                    <i class="fa-solid fa-certificate mr-1.5 text-brand-orange"></i> Produits Naturels du Sénégal
+                    <i class="fa-solid fa-certificate mr-1.5 text-brand-orange"></i> Spécialités Naturelles du Sénégal
                 </span>
                 <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
                     Le meilleur de notre terroir, <span class="text-brand-lightgreen">du champ à votre table</span>.
                 </h1>
                 <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-                    Commandez vos essentiels de cuisine, infusions de santé (Bissap, Moringa) et pâtes locales en formats flexibles, de 500g jusqu'à 50kg, directement depuis Bambey.
+                    Commandez vos essentiels de cuisine, produits céréaliers nobles, farines, infusions naturelles de santé et condiments en formats flexibles de <strong class="text-white font-semibold">500g à 50kg</strong>.
                 </p>
                 
-                <div class="pt-4">
+                <div class="pt-6">
                     <p class="text-xs uppercase tracking-widest text-brand-lightgreen font-bold mb-4">Cliquez sur une catégorie pour découvrir nos produits :</p>
                     <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                        <a href="cereales.html" class="px-6 py-4 bg-white text-brand-darkgreen hover:bg-brand-lightgreen font-bold rounded-xl shadow-md transition-all text-sm flex items-center">
-                            <i class="fa-solid fa-bowl-rice mr-2 text-brand-orange text-lg"></i> Céréales & Dérivés
+                        <a href="cereales.html" class="px-6 py-4 bg-white text-brand-darkgreen hover:bg-brand-lightgreen font-bold rounded-xl shadow-md transition-all text-sm flex items-center group">
+                            <i class="fa-solid fa-bowl-rice mr-2 text-brand-orange text-lg group-hover:scale-110 transition"></i> Céréales & Dérivés
                         </a>
-                        <a href="legumineuses.html" class="px-6 py-4 bg-white text-brand-darkgreen hover:bg-brand-lightgreen font-bold rounded-xl shadow-md transition-all text-sm flex items-center">
-                            <i class="fa-solid fa-seedling mr-2 text-brand-orange text-lg"></i> Légumineuses
+                        <a href="legumineuses.html" class="px-6 py-4 bg-white text-brand-darkgreen hover:bg-brand-lightgreen font-bold rounded-xl shadow-md transition-all text-sm flex items-center group">
+                            <i class="fa-solid fa-seedling mr-2 text-brand-orange text-lg group-hover:scale-110 transition"></i> Légumineuses
                         </a>
-                        <a href="condiments.html" class="px-6 py-4 bg-white text-brand-darkgreen hover:bg-brand-lightgreen font-bold rounded-xl shadow-md transition-all text-sm flex items-center">
-                            <i class="fa-solid fa-leaf mr-2 text-brand-orange text-lg"></i> Condiments, Bissap & Moringa
+                        <a href="condiments.html" class="px-6 py-4 bg-white text-brand-darkgreen hover:bg-brand-lightgreen font-bold rounded-xl shadow-md transition-all text-sm flex items-center group">
+                            <i class="fa-solid fa-leaf mr-2 text-brand-orange text-lg group-hover:scale-110 transition"></i> Condiments & Infusions
                         </a>
                     </div>
                 </div>
@@ -92,8 +106,79 @@
         </div>
     </header>
 
-    <footer class="bg-stone-900 text-stone-400 py-8 border-t border-stone-800 text-center text-xs">
-        <p>&copy; 2026 NDIAYE LOCAL - Escale, Bambey, Sénégal. Contact : +221 77 868 88 30</p>
+    <!-- SECTION SERVICES & ENGAGEMENTS -->
+    <section class="py-16 bg-white border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="font-playfair text-3xl font-bold text-brand-darkgreen">Pourquoi choisir NDIAYE LOCAL ?</h2>
+                <p class="text-slate-500 mt-2 text-sm">Nous plaçons la qualité, l'hygiène et l'authenticité au cœur de notre processus de conditionnement.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-brand-lightbg p-6 rounded-2xl border border-stone-100 text-center space-y-3">
+                    <div class="w-12 h-12 bg-brand-lightgreen text-brand-darkgreen rounded-xl flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900">Produits 100% Purs</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Sans additifs chimiques, conservateurs ni arômes artificiels.</p>
+                </div>
+                
+                <div class="bg-brand-lightbg p-6 rounded-2xl border border-stone-100 text-center space-y-3">
+                    <div class="w-12 h-12 bg-brand-lightgreen text-brand-darkgreen rounded-xl flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-solid fa-weight-scale"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900">Du Détail au Gros</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Sachets de 500g pour la cuisine de tous les jours ou sacs de 25kg/50kg pour les stocks.</p>
+                </div>
+                
+                <div class="bg-brand-lightbg p-6 rounded-2xl border border-stone-100 text-center space-y-3">
+                    <div class="w-12 h-12 bg-brand-lightgreen text-brand-darkgreen rounded-xl flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900">Livraison Internationale</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Expéditions sécurisées partout au Sénégal et à l'étranger depuis notre dépôt à Bambey.</p>
+                </div>
+                
+                <div class="bg-brand-lightbg p-6 rounded-2xl border border-stone-100 text-center space-y-3">
+                    <div class="w-12 h-12 bg-brand-lightgreen text-brand-darkgreen rounded-xl flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900">Simplicité WhatsApp</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Sélectionnez vos articles sur le site, cliquez, et validez votre livraison directement en ligne.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <span class="font-playfair text-2xl font-black tracking-wide text-white block">NDIAYE LOCAL</span>
+                <p class="text-xs text-stone-400 leading-relaxed">
+                    Valorisation, transformation et emballage soigné de nos produits agricoles locaux. Une qualité garantie pour tous les foyers d'ici et d'ailleurs.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 text-sm">Nos Rayons</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="cereales.html" class="hover:text-white transition">Céréales de Mil, Maïs & Fonio</a></li>
+                    <li><a href="legumineuses.html" class="hover:text-white transition">Légumineuses (Niébé Blanc, Rouge, Farine)</a></li>
+                    <li><a href="condiments.html" class="hover:text-white transition">Condiments, Bissap & Moringa</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-white font-bold text-sm">Centrale d'Expéditions</h4>
+                <p class="text-xs"><i class="fa-solid fa-location-dot text-brand-orange mr-2"></i> Quartier Escale, Bambey, Sénégal</p>
+                <div class="flex items-center space-x-3 text-white">
+                    <span class="p-2 bg-stone-800 rounded-lg text-sm"><i class="fa-solid fa-phone text-brand-orange"></i></span>
+                    <span class="font-semibold text-xs">+221 77 868 88 30</span>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-stone-800 text-center text-[11px] text-stone-500">
+            &copy; 2026 NDIAYE LOCAL. Tous droits réservés. Produit à Bambey.
+        </div>
     </footer>
 </body>
 </html>
