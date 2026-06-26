@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pâtes & Condiments - NDIAYE LOCAL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { brand: { darkgreen: '#1b4d3e', green: '#2d6a4f', lightgreen: '#d8f3dc', orange: '#e65100', terracotta: '#d85a38', lightbg: '#fcfbf7' } } } }
+        }
+    </script>
+</head>
+<body class="bg-brand-lightbg font-jakarta text-slate-800 antialiased min-h-screen flex flex-col">
 
+    <!-- NAVIGATION -->
+    <nav class="bg-white border-b border-stone-200 shadow-sm h-20 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fa-solid fa-arrow-left text-brand-darkgreen"></i>
+                <span class="font-bold text-sm text-brand-darkgreen">Retour à l'accueil</span>
+            </a>
+            <span class="font-playfair font-black text-xl text-brand-darkgreen">NDIAYE LOCAL</span>
+        </div>
+    </nav>
+
+    <!-- ENTÊTE DE PAGE -->
+    <div class="max-w-7xl mx-auto px-4 pt-12 text-center">
+        <h1 class="font-playfair text-3xl sm:text-4xl font-extrabold text-brand-darkgreen">Pâtes & Condiments</h1>
+        <p class="text-slate-500 text-sm mt-2">Le meilleur goût de notre terroir pour vos sauces onctueuses.</p>
+        <div class="w-12 h-1 bg-brand-orange mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- GRILLE PRODUITS -->
+    <main class="max-w-7xl mx-auto px-4 py-12 flex-grow grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+        
+        <!-- PRODUIT 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/2179846533683002479_0" alt="Arachide Poudre" class="w-full h-48 object-cover rounded-xl mb-4">
+                <h3 class="font-playfair text-xl font-bold">Arachide en poudre</h3>
+                <p class="text-xs text-slate-500 mt-1">Poudre extra-fine d'arachides grillées pour vos préparations.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-poudre" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="500g - 1 500 FCFA">500g — 1 500 FCFA</option>
+                    <option value="1kg - 2 800 FCFA">1kg — 2 800 FCFA</option>
+                    <option value="5kg - 13 500 FCFA">5kg — 13 500 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Arachide en poudre', 'size-poudre')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander cet article</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/10741805376329937308_0" alt="Tiguadege" class="w-full h-48 object-cover rounded-xl mb-4">
+                <h3 class="font-playfair text-xl font-bold">Tiguadégué (Pâte d'arachide)</h3>
+                <p class="text-xs text-slate-500 mt-1">Pâte d'arachide pure et onctueuse, la base idéale pour un Mafé réussi.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-tiguadege" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="500g - 1 800 FCFA">500g — 1 800 FCFA</option>
+                    <option value="1kg - 3 400 FCFA">1kg — 3 400 FCFA</option>
+                    <option value="5kg - 16 500 FCFA">5kg — 16 500 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Tiguadégué', 'size-tiguadege')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander cet article</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-500 py-6 text-center text-xs w-full mt-auto">
+        Bambey, Sénégal — Livraison partout dans le monde.
+    </footer>
+
+    <script>
+        function orderWhatsApp(name, selectId) {
+            const format = document.getElementById(selectId).value;
+            const text = `Bonjour NDIAYE LOCAL ! 🌾\nJe souhaite commander le produit suivant depuis votre page Condiments :\n\n- Condiment : *${name}*\n- Format & Prix : *${format}*\n\nExpédition depuis Bambey. Merci !`;
+            window.open(`https://wa.me/221778688830?text=${encodeURIComponent(text)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
