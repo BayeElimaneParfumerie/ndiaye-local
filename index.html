@@ -5,132 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NDIAYE LOCAL - Le meilleur du terroir sénégalais</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            darkgreen: '#1b4d3e',
-                            green: '#2d6a4f',
-                            lightgreen: '#d8f3dc',
-                            orange: '#e65100',
-                            terracotta: '#d85a38',
-                            lightbg: '#fcfbf7'
-                        }
-                    },
-                    fontFamily: {
-                        playfair: ['"Playfair Display"', 'serif'],
-                        jakarta: ['"Plus Jakarta Sans"', 'sans-serif']
-                    }
-                }
-            }
+            theme: { extend: { colors: { brand: { darkgreen: '#1b4d3e', green: '#2d6a4f', lightgreen: '#d8f3dc', orange: '#e65100', terracotta: '#d85a38', lightbg: '#fcfbf7' } } } }
         }
     </script>
 </head>
 <body class="bg-brand-lightbg font-jakarta text-slate-800 antialiased min-h-screen flex flex-col">
 
-    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200/80 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 bg-brand-darkgreen rounded-xl flex items-center justify-center text-white shadow-md">
-                    <i class="fa-solid fa-wheat-awn text-xl text-brand-lightgreen"></i>
-                </div>
-                <div>
-                    <span class="font-playfair text-xl font-extrabold text-brand-darkgreen block leading-none">NDIAYE LOCAL</span>
-                    <span class="text-[9px] uppercase tracking-widest text-brand-terracotta font-bold block mt-1">Bambey • Qualité Premium</span>
-                </div>
-            </a>
-            <a href="https://wa.me/221778688830" target="_blank" class="px-4 py-2 bg-brand-green text-white text-xs font-bold rounded-lg hover:bg-brand-darkgreen transition flex items-center space-x-1">
-                <i class="fa-brands fa-whatsapp text-sm"></i>
-                <span class="hidden sm:inline">Commander via WhatsApp</span>
-            </a>
+    <nav class="bg-white border-b border-stone-200 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-playfair font-black text-xl text-brand-darkgreen">NDIAYE LOCAL</a>
+            <div class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="index.html" class="text-brand-darkgreen">Accueil</a>
+                <a href="cereales.html" class="hover:text-brand-green">Céréales</a>
+                <a href="legumineuses.html" class="hover:text-brand-green">Légumineuses</a>
+                <a href="condiments.html" class="hover:text-brand-green">Condiments</a>
+                <a href="livraison.html" class="hover:text-brand-green">Livraison</a>
+                <a href="a-propos.html" class="hover:text-brand-green">À propos</a>
+            </div>
+            <a href="https://wa.me/221778688830" class="px-4 py-2 bg-brand-green text-white text-xs font-bold rounded-lg hover:bg-brand-darkgreen transition">Commander</a>
         </div>
     </nav>
 
-    <header class="relative bg-brand-darkgreen text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="font-playfair text-4xl sm:text-6xl font-black mb-6 leading-tight">
-                Le meilleur de notre terroir <br/><span class="text-brand-lightgreen">à votre porte.</span>
-            </h1>
-            <p class="text-slate-300 text-lg max-w-2xl mx-auto mb-10">
-                Qualité, hygiène et authenticité depuis Bambey. Vos céréales, condiments et légumineuses livrés avec soin.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#packs" class="px-8 py-4 bg-brand-orange text-white font-bold rounded-xl hover:bg-orange-700 transition">Nos Packs Découverte</a>
-                <a href="cereales.html" class="px-8 py-4 bg-white text-brand-darkgreen font-bold rounded-xl hover:bg-brand-lightgreen transition">Voir le Catalogue</a>
-            </div>
+    <header class="py-20 bg-brand-darkgreen text-white text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h1 class="font-playfair text-4xl sm:text-6xl font-black mb-6">Le meilleur de notre terroir à votre porte.</h1>
+            <p class="text-brand-lightgreen text-lg mb-8 opacity-90">Produits locaux, hygiène garantie, livraison rapide depuis Bambey.</p>
+            <a href="cereales.html" class="inline-block px-8 py-4 bg-brand-orange text-white font-bold rounded-xl hover:bg-orange-700 transition">Découvrir le catalogue</a>
         </div>
     </header>
 
-    <section id="packs" class="py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="font-playfair text-3xl font-bold text-brand-darkgreen mb-10 text-center">Packs "Prêt-à-Cuisiner"</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Pack 1 -->
-                <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-                    <div class="text-4xl mb-4">🧺</div>
-                    <h3 class="font-bold text-lg text-brand-darkgreen mb-2">Pack Familial</h3>
-                    <p class="text-xs text-slate-500 mb-4">Mil, niébé et condiments pour une semaine complète de repas sains.</p>
-                    <button onclick="window.open('https://wa.me/221778688830?text=Je+souhaite+commander+le+Pack+Familial')" class="w-full py-2 border border-brand-green text-brand-green font-bold rounded-lg hover:bg-brand-green hover:text-white transition text-xs">
-                        Commander ce Pack
-                    </button>
-                </div>
-                <!-- Pack 2 -->
-                <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-                    <div class="text-4xl mb-4">✨</div>
-                    <h3 class="font-bold text-lg text-brand-darkgreen mb-2">Pack Santé</h3>
-                    <p class="text-xs text-slate-500 mb-4">Fonio, moringa et ingrédients naturels pour vos infusions et petit-déjeuner.</p>
-                    <button onclick="window.open('https://wa.me/221778688830?text=Je+souhaite+commander+le+Pack+Santé')" class="w-full py-2 border border-brand-green text-brand-green font-bold rounded-lg hover:bg-brand-green hover:text-white transition text-xs">
-                        Commander ce Pack
-                    </button>
-                </div>
-                <!-- Pack 3 -->
-                <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-                    <div class="text-4xl mb-4">🥘</div>
-                    <h3 class="font-bold text-lg text-brand-darkgreen mb-2">Pack Saveurs</h3>
-                    <p class="text-xs text-slate-500 mb-4">Assortiment complet de nos condiments et pâtes pour épater vos invités.</p>
-                    <button onclick="window.open('https://wa.me/221778688830?text=Je+souhaite+commander+le+Pack+Saveurs')" class="w-full py-2 border border-brand-green text-brand-green font-bold rounded-lg hover:bg-brand-green hover:text-white transition text-xs">
-                        Commander ce Pack
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <a href="cereales.html" class="p-8 bg-white border rounded-2xl text-center hover:border-brand-green transition">
+            <i class="fa-solid fa-bowl-rice text-4xl text-brand-orange mb-4"></i>
+            <h3 class="font-bold text-xl mb-2">Céréales</h3>
+            <p class="text-sm text-slate-500">Thiéré, Thiakry, Sankhal...</p>
+        </a>
+        <a href="legumineuses.html" class="p-8 bg-white border rounded-2xl text-center hover:border-brand-green transition">
+            <i class="fa-solid fa-seedling text-4xl text-brand-orange mb-4"></i>
+            <h3 class="font-bold text-xl mb-2">Légumineuses</h3>
+            <p class="text-sm text-slate-500">Niébé, Haricots...</p>
+        </a>
+        <a href="condiments.html" class="p-8 bg-white border rounded-2xl text-center hover:border-brand-green transition">
+            <i class="fa-solid fa-leaf text-4xl text-brand-orange mb-4"></i>
+            <h3 class="font-bold text-xl mb-2">Condiments</h3>
+            <p class="text-sm text-slate-500">Tiguadégué, Bissap...</p>
+        </a>
+        <a href="livraison.html" class="p-8 bg-white border rounded-2xl text-center hover:border-brand-green transition">
+            <i class="fa-solid fa-truck-fast text-4xl text-brand-orange mb-4"></i>
+            <h3 class="font-bold text-xl mb-2">Livraison</h3>
+            <p class="text-sm text-slate-500">Toutes destinations</p>
+        </a>
+    </main>
 
-    <section class="py-16 bg-white border-y border-stone-100">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="font-playfair text-3xl font-bold text-brand-darkgreen mb-8 text-center">Parcourez nos rayons</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <a href="cereales.html" class="group block p-8 bg-brand-lightbg rounded-2xl text-center hover:bg-brand-green/5 transition">
-                    <i class="fa-solid fa-bowl-rice text-brand-orange text-4xl mb-4"></i>
-                    <h4 class="font-bold text-lg">Céréales & Dérivés</h4>
-                    <p class="text-xs text-slate-500 mt-2">Mil, Thiéré, Fonio...</p>
-                </a>
-                <a href="legumineuses.html" class="group block p-8 bg-brand-lightbg rounded-2xl text-center hover:bg-brand-green/5 transition">
-                    <i class="fa-solid fa-seedling text-brand-orange text-4xl mb-4"></i>
-                    <h4 class="font-bold text-lg">Légumineuses</h4>
-                    <p class="text-xs text-slate-500 mt-2">Niébé, Sésame...</p>
-                </a>
-                <a href="condiments.html" class="group block p-8 bg-brand-lightbg rounded-2xl text-center hover:bg-brand-green/5 transition">
-                    <i class="fa-solid fa-leaf text-brand-orange text-4xl mb-4"></i>
-                    <h4 class="font-bold text-lg">Condiments & Infusions</h4>
-                    <p class="text-xs text-slate-500 mt-2">Pâtes, Moringa, Bissap...</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-stone-900 text-stone-400 py-12 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 text-center text-xs">
-            <p class="mb-4 font-bold text-white">NDIAYE LOCAL</p>
-            <p>&copy; 2026. Livraison sécurisée depuis Bambey.</p>
-        </div>
+    <footer class="bg-stone-900 text-stone-400 py-12 text-center text-sm">
+        <p class="text-white font-bold mb-2">NDIAYE LOCAL</p>
+        <p>&copy; 2026. Qualité et tradition.</p>
     </footer>
 </body>
 </html>
