@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraison - NDIAYE LOCAL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { brand: { darkgreen: '#1b4d3e', green: '#2d6a4f', orange: '#e65100', lightbg: '#fcfbf7' } } } }
+        }
+    </script>
+</head>
+<body class="bg-brand-lightbg font-jakarta text-slate-800 min-h-screen">
+    <nav class="bg-white border-b h-20 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
+            <a href="index.html" class="font-bold text-brand-darkgreen">NDIAYE LOCAL</a>
+            <a href="index.html" class="text-xs font-semibold hover:text-brand-green">Retour Accueil</a>
+        </div>
+    </nav>
 
+    <main class="max-w-3xl mx-auto px-4 py-16">
+        <h1 class="text-3xl font-playfair font-bold text-brand-darkgreen mb-8">Informations de livraison</h1>
+        
+        <div class="bg-white p-8 rounded-2xl border shadow-sm space-y-6">
+            <div>
+                <h3 class="font-bold text-lg mb-2 text-brand-darkgreen">🚚 Zones de livraison</h3>
+                <p class="text-slate-600">Nous livrons partout à Dakar et dans toutes les régions du Sénégal. Les frais sont calculés selon la distance et le poids du colis.</p>
+            </div>
+            
+            <div>
+                <h3 class="font-bold text-lg mb-2 text-brand-darkgreen">💳 Paiements acceptés</h3>
+                <p class="text-slate-600">Vous pouvez régler vos commandes en toute sécurité via :</p>
+                <ul class="list-disc ml-6 mt-2 text-slate-600">
+                    <li>Wave</li>
+                    <li>Orange Money</li>
+                    <li>Paiement à la livraison (sous conditions)</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg mb-2 text-brand-darkgreen">⏱ Délais</h3>
+                <p class="text-slate-600">Dakar : 24h à 48h. Régions : 48h à 72h.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
