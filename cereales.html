@@ -15,70 +15,160 @@
 </head>
 <body class="bg-brand-lightbg font-jakarta text-slate-800 antialiased min-h-screen flex flex-col">
 
+    <!-- NAVIGATION -->
     <nav class="bg-white border-b border-stone-200 shadow-sm h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2">
                 <i class="fa-solid fa-arrow-left text-brand-darkgreen"></i>
-                <span class="font-bold text-sm text-brand-darkgreen">Retour</span>
+                <span class="font-bold text-sm text-brand-darkgreen">Retour à l'accueil</span>
             </a>
-            <span class="font-playfair font-black text-xl text-brand-darkgreen">NDIAYE LOCAL</span>
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-brand-darkgreen rounded-lg flex items-center justify-center text-white font-playfair font-black text-xs">NL</div>
+                <span class="font-playfair font-black text-lg text-brand-darkgreen hidden sm:inline">NDIAYE LOCAL</span>
+            </div>
         </div>
     </nav>
 
+    <!-- ENTÊTE DE PAGE -->
     <div class="max-w-7xl mx-auto px-4 pt-12 text-center">
         <h1 class="font-playfair text-3xl sm:text-4xl font-extrabold text-brand-darkgreen">Céréales & Dérivés</h1>
+        <p class="text-slate-500 text-sm mt-2">Notre sélection de céréales et farines traitées et conditionnées avec hygiène à Bambey par NDIAYE LOCAL.</p>
         <div class="w-12 h-1 bg-brand-orange mx-auto mt-4 rounded-full"></div>
     </div>
 
+    <!-- GRILLE PRODUITS (6 PRODUITS) -->
     <main class="max-w-7xl mx-auto px-4 py-12 flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- PRODUIT : THIERE -->
-        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 flex flex-col justify-between">
-            <div class="text-center mb-6">
-                <div class="w-20 h-20 bg-brand-lightgreen rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🌾</div>
+        
+        <!-- PRODUIT 1 : THIERE -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-stone-600 text-5xl">🌾</div>
                 <h3 class="font-playfair text-xl font-bold">Thiéré (Couscous de mil)</h3>
+                <p class="text-xs text-slate-500 mt-1">Délicieux couscous traditionnel roulé à la main, très tendre et digeste.</p>
             </div>
-            <div class="mt-auto">
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
                 <select id="size-thiere" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
                     <option value="500g - 1 500 FCFA">500g — 1 500 FCFA</option>
                     <option value="1kg - 2 800 FCFA">1kg — 2 800 FCFA</option>
+                    <option value="5kg - 13 500 FCFA">5kg — 13 500 FCFA</option>
+                    <option value="25kg - 62 500 FCFA">25kg — 62 500 FCFA</option>
                 </select>
-                <button onclick="orderWhatsApp('Thiéré', 'size-thiere')" class="w-full mt-4 py-3 bg-brand-green text-white font-bold text-sm rounded-xl hover:bg-brand-darkgreen transition">Commander</button>
+                <button onclick="orderWhatsApp('Thiéré', 'size-thiere')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander cet article</span>
+                </button>
             </div>
         </div>
-        <!-- PRODUIT : THIAKRY -->
-        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 flex flex-col justify-between">
-            <div class="text-center mb-6">
-                <div class="w-20 h-20 bg-brand-lightgreen rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🥣</div>
-                <h3 class="font-playfair text-xl font-bold">Thiakry (Granulés)</h3>
+
+        <!-- PRODUIT 2 : THIAKRY -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-stone-600 text-5xl">🥣</div>
+                <h3 class="font-playfair text-xl font-bold">Thiakry (Granulés de mil)</h3>
+                <p class="text-xs text-slate-500 mt-1">Granulés de mil précuits à la vapeur, parfaits pour vos desserts avec du lait caillé.</p>
             </div>
-            <div class="mt-auto">
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
                 <select id="size-thiakry" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
                     <option value="500g - 1 200 FCFA">500g — 1 200 FCFA</option>
                     <option value="1kg - 2 200 FCFA">1kg — 2 200 FCFA</option>
+                    <option value="5kg - 10 500 FCFA">5kg — 10 500 FCFA</option>
+                    <option value="25kg - 48 000 FCFA">25kg — 48 000 FCFA</option>
                 </select>
-                <button onclick="orderWhatsApp('Thiakry', 'size-thiakry')" class="w-full mt-4 py-3 bg-brand-green text-white font-bold text-sm rounded-xl hover:bg-brand-darkgreen transition">Commander</button>
+                <button onclick="orderWhatsApp('Thiakry', 'size-thiakry')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander cet article</span>
+                </button>
             </div>
         </div>
-        <!-- PRODUIT : ARRAW -->
-        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 flex flex-col justify-between">
-            <div class="text-center mb-6">
-                <div class="w-20 h-20 bg-brand-lightgreen rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🥛</div>
-                <h3 class="font-playfair text-xl font-bold">Arraw de Mil</h3>
+
+        <!-- PRODUIT 3 : ARRAW -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-stone-600 text-5xl">🥣</div>
+                <h3 class="font-playfair text-xl font-bold">Arraw de Mil (Araw)</h3>
+                <p class="text-xs text-slate-500 mt-1">Petites billes de mil façonnées pour une bouillie (fondé) traditionnelle onctueuse.</p>
             </div>
-            <div class="mt-auto">
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
                 <select id="size-arraw" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
                     <option value="500g - 1 200 FCFA">500g — 1 200 FCFA</option>
                     <option value="1kg - 2 300 FCFA">1kg — 2 300 FCFA</option>
+                    <option value="5kg - 11 000 FCFA">5kg — 11 000 FCFA</option>
                 </select>
-                <button onclick="orderWhatsApp('Arraw de Mil', 'size-arraw')" class="w-full mt-4 py-3 bg-brand-green text-white font-bold text-sm rounded-xl hover:bg-brand-darkgreen transition">Commander</button>
+                <button onclick="orderWhatsApp('Arraw de Mil', 'size-arraw')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander cet article</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 4 : SANKAL -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-stone-600 text-5xl">🌾</div>
+                <h3 class="font-playfair text-xl font-bold">Sankal</h3>
+                <p class="text-xs text-slate-500 mt-1">Brisures moyennes de mil idéal pour la confection du lakh traditionnel.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-sankal" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="500g - 600 FCFA">500g — 600 FCFA</option>
+                    <option value="1kg - 1 000 FCFA">1kg — 1 000 FCFA</option>
+                    <option value="5kg - 4 800 FCFA">5kg — 4 800 FCFA</option>
+                    <option value="25kg - 22 000 FCFA">25kg — 22 000 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Sankal', 'size-sankal')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander cet article</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 5 : FARINE DE MIL -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-stone-50 rounded-xl mb-4 flex items-center justify-center text-yellow-800 text-5xl">🌾</div>
+                <h3 class="font-playfair text-xl font-bold">Farine de Mil Pure</h3>
+                <p class="text-xs text-slate-500 mt-1">Farine tamisée extra-fine, parfaite pour la bouillie des enfants ou les préparations de gâteaux.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-farine" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="500g - 800 FCFA">500g — 800 FCFA</option>
+                    <option value="1kg - 1 500 FCFA">1kg — 1 500 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Farine de Mil Pure', 'size-farine')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander cet article</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUIT 6 : FONIO -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
+            <div>
+                <div class="w-full h-48 bg-amber-50 rounded-xl mb-4 flex items-center justify-center text-amber-700 text-5xl">🌾</div>
+                <h3 class="font-playfair text-xl font-bold">Fonio Précuit</h3>
+                <p class="text-xs text-slate-500 mt-1">Céréale locale très légère, nutritive et sans gluten, prête en quelques minutes d'infusion.</p>
+            </div>
+            <div class="mt-4">
+                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
+                <select id="size-fonio" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
+                    <option value="500g - 1 500 FCFA">500g — 1 500 FCFA</option>
+                    <option value="1kg - 2 900 FCFA">1kg — 2 900 FCFA</option>
+                </select>
+                <button onclick="orderWhatsApp('Fonio Précuit', 'size-fonio')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Commander cet article</span>
+                </button>
             </div>
         </div>
     </main>
 
+    <footer class="bg-stone-900 text-stone-500 py-6 text-center text-xs w-full mt-auto">
+        NDIAYE LOCAL — Bambey, Sénégal.
+    </footer>
+
     <script>
         function orderWhatsApp(name, selectId) {
             const format = document.getElementById(selectId).value;
-            const text = `Bonjour NDIAYE LOCAL ! Je souhaite commander : *${name}* (${format}).`;
+            const text = `Bonjour NDIAYE LOCAL ! 🌾\nJe souhaite commander le produit suivant depuis votre page Céréales :\n\n- Produit : *${name}*\n- Format & Prix : *${format}*\n\nJe suis disponible pour organiser l'expédition depuis Bambey. Merci !`;
             window.open(`https://wa.me/221778688830?text=${encodeURIComponent(text)}`, '_blank');
         }
     </script>
