@@ -18,15 +18,31 @@
     <nav class="bg-white border-b border-stone-200 shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             <a href="index.html" class="font-playfair font-black text-xl text-brand-darkgreen">NDIAYE LOCAL</a>
+            
+            <!-- Mobile menu button -->
+            <button id="menu-btn" class="md:hidden text-brand-darkgreen p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Desktop Nav -->
             <div class="hidden md:flex space-x-6 text-sm font-semibold">
                 <a href="index.html" class="text-brand-darkgreen">Accueil</a>
                 <a href="cereales.html" class="hover:text-brand-green">Céréales</a>
                 <a href="legumineuses.html" class="hover:text-brand-green">Légumineuses</a>
                 <a href="condiments.html" class="hover:text-brand-green">Condiments</a>
                 <a href="livraison.html" class="hover:text-brand-green">Livraison</a>
-                <a href="a-propos.html" class="hover:text-brand-green">À propos</a>
             </div>
-            <a href="https://wa.me/221778688830" class="px-4 py-2 bg-brand-green text-white text-xs font-bold rounded-lg hover:bg-brand-darkgreen transition">Commander</a>
+            <a href="https://wa.me/221778688830" class="hidden md:block px-4 py-2 bg-brand-green text-white text-xs font-bold rounded-lg hover:bg-brand-darkgreen transition">Commander</a>
+        </div>
+        
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 p-4 space-y-4 text-sm font-semibold">
+            <a href="index.html" class="block py-2">Accueil</a>
+            <a href="cereales.html" class="block py-2">Céréales</a>
+            <a href="legumineuses.html" class="block py-2">Légumineuses</a>
+            <a href="condiments.html" class="block py-2">Condiments</a>
+            <a href="livraison.html" class="block py-2">Livraison</a>
+            <a href="https://wa.me/221778688830" class="block py-3 px-4 bg-brand-green text-white text-center rounded-lg">Commander sur WhatsApp</a>
         </div>
     </nav>
 
@@ -65,5 +81,15 @@
         <p class="text-white font-bold mb-2">NDIAYE LOCAL</p>
         <p>&copy; 2026. Qualité et tradition.</p>
     </footer>
+
+    <script>
+        // Simple script for mobile menu
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
