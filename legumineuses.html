@@ -15,122 +15,52 @@
 </head>
 <body class="bg-brand-lightbg font-jakarta text-slate-800 antialiased min-h-screen flex flex-col">
 
-    <!-- NAVIGATION -->
     <nav class="bg-white border-b border-stone-200 shadow-sm h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2">
                 <i class="fa-solid fa-arrow-left text-brand-darkgreen"></i>
-                <span class="font-bold text-sm text-brand-darkgreen">Retour à l'accueil</span>
+                <span class="font-bold text-sm text-brand-darkgreen">Retour</span>
             </a>
-            <div class="hidden sm:flex space-x-4 text-xs font-bold text-slate-500">
-                <a href="cereales.html" class="hover:text-brand-green">Céréales</a>
-                <a href="condiments.html" class="hover:text-brand-green">Condiments & Infusions</a>
-            </div>
             <span class="font-playfair font-black text-xl text-brand-darkgreen">NDIAYE LOCAL</span>
         </div>
     </nav>
 
-    <!-- ENTÊTE DE PAGE -->
     <div class="max-w-7xl mx-auto px-4 pt-12 text-center">
         <h1 class="font-playfair text-3xl sm:text-4xl font-extrabold text-brand-darkgreen">Légumineuses</h1>
-        <p class="text-slate-500 text-sm mt-2">Nos graines, haricots et farines de légumineuses rigoureusement triés et préparés à Bambey.</p>
         <div class="w-12 h-1 bg-brand-orange mx-auto mt-4 rounded-full"></div>
     </div>
 
-    <!-- GRILLE PRODUITS ENRICHIE (4 PRODUITS) -->
-    <main class="max-w-7xl mx-auto px-4 py-12 flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
-        
-        <!-- PRODUIT 1 : NIEBE BLANC -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
-            <div>
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/16061553396271792921_0" alt="Niébé Blanc" class="w-full h-48 object-cover rounded-xl mb-4">
-                <h3 class="font-playfair text-xl font-bold">Niébé Blanc (Classique)</h3>
-                <p class="text-xs text-slate-500 mt-1">Haricot local très sain, riche en protéines végétales et fer, indispensable pour vos plats.</p>
+    <main class="max-w-7xl mx-auto px-4 py-12 flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- PRODUIT : NIEBE BLANC -->
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+            <div class="text-center mb-6">
+                <div class="w-20 h-20 bg-brand-lightgreen rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🫘</div>
+                <h3 class="font-playfair text-xl font-bold">Niébé Blanc</h3>
             </div>
-            <div class="mt-4">
-                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
-                <select id="size-niebe-blanc" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
-                    <option value="500g - 700 FCFA">500g — 700 FCFA</option>
-                    <option value="1kg - 1 300 FCFA">1kg — 1 300 FCFA</option>
-                    <option value="5kg - 6 200 FCFA">5kg — 6 200 FCFA</option>
-                    <option value="25kg - 28 500 FCFA">25kg — 28 500 FCFA</option>
-                </select>
-                <button onclick="orderWhatsApp('Niébé Blanc', 'size-niebe-blanc')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
-                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
-                </button>
-            </div>
+            <select id="size-niebe" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold">
+                <option value="1kg - 1 300 FCFA">1kg — 1 300 FCFA</option>
+                <option value="5kg - 6 200 FCFA">5kg — 6 200 FCFA</option>
+            </select>
+            <button onclick="orderWhatsApp('Niébé Blanc', 'size-niebe')" class="w-full mt-4 py-3 bg-brand-green text-white font-bold text-sm rounded-xl hover:bg-brand-darkgreen transition">Commander</button>
         </div>
-
-        <!-- PRODUIT 2 : NIEBE ROUGE -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
-            <div>
-                <div class="w-full h-48 bg-amber-900/10 rounded-xl mb-4 flex items-center justify-center text-amber-800 text-5xl">🫘</div>
-                <h3 class="font-playfair text-xl font-bold">Niébé Rouge</h3>
-                <p class="text-xs text-slate-500 mt-1">Variété riche en goût et en minéraux, excellente pour les salades et sauces mijotées.</p>
-            </div>
-            <div class="mt-4">
-                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
-                <select id="size-niebe-rouge" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
-                    <option value="500g - 800 FCFA">500g — 800 FCFA</option>
-                    <option value="1kg - 1 500 FCFA">1kg — 1 500 FCFA</option>
-                    <option value="5kg - 7 000 FCFA">5kg — 7 000 FCFA</option>
-                    <option value="25kg - 32 000 FCFA">25kg — 32 000 FCFA</option>
-                </select>
-                <button onclick="orderWhatsApp('Niébé Rouge', 'size-niebe-rouge')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
-                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- PRODUIT 3 : FARINE DE NIEBE -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
-            <div>
-                <div class="w-full h-48 bg-amber-50 rounded-xl mb-4 flex items-center justify-center text-amber-600 text-5xl">🌾</div>
+        <!-- PRODUIT : FARINE NIEBE -->
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6">
+            <div class="text-center mb-6">
+                <div class="w-20 h-20 bg-brand-lightgreen rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🌾</div>
                 <h3 class="font-playfair text-xl font-bold">Farine de Niébé</h3>
-                <p class="text-xs text-slate-500 mt-1">Farine fine prête à l'emploi pour préparer vos beignets Akara croustillants en quelques minutes.</p>
             </div>
-            <div class="mt-4">
-                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
-                <select id="size-farine-niebe" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
-                    <option value="500g - 1 000 FCFA">500g — 1 000 FCFA</option>
-                    <option value="1kg - 1 900 FCFA">1kg — 1 900 FCFA</option>
-                    <option value="5kg - 9 000 FCFA">5kg — 9 000 FCFA</option>
-                </select>
-                <button onclick="orderWhatsApp('Farine de Niébé', 'size-farine-niebe')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
-                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- PRODUIT 4 : GRAINES DE SESAME -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-md p-6 flex flex-col justify-between">
-            <div>
-                <div class="w-full h-48 bg-yellow-50 rounded-xl mb-4 flex items-center justify-center text-yellow-600 text-5xl">✨</div>
-                <h3 class="font-playfair text-xl font-bold">Sésame Local (Béné)</h3>
-                <p class="text-xs text-slate-500 mt-1">Graines de sésame du terroir, idéales pour enrichir les bouillies de mil ou faire des douceurs.</p>
-            </div>
-            <div class="mt-4">
-                <label class="text-[10px] font-bold uppercase text-slate-400 block">Choisir le format :</label>
-                <select id="size-sesame" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold mt-1">
-                    <option value="250g - 1 200 FCFA">250g — 1 200 FCFA</option>
-                    <option value="500g - 2 200 FCFA">500g — 2 200 FCFA</option>
-                    <option value="1kg - 4 000 FCFA">1kg — 4 000 FCFA</option>
-                </select>
-                <button onclick="orderWhatsApp('Graines de Sésame (Béné)', 'size-sesame')" class="w-full mt-4 py-3 bg-brand-green hover:bg-brand-darkgreen text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2">
-                    <i class="fa-brands fa-whatsapp"></i> <span>Commander</span>
-                </button>
-            </div>
+            <select id="size-farine" class="w-full bg-stone-50 border p-2.5 rounded-xl text-sm font-semibold">
+                <option value="500g - 1 000 FCFA">500g — 1 000 FCFA</option>
+                <option value="1kg - 1 900 FCFA">1kg — 1 900 FCFA</option>
+            </select>
+            <button onclick="orderWhatsApp('Farine de Niébé', 'size-farine')" class="w-full mt-4 py-3 bg-brand-green text-white font-bold text-sm rounded-xl hover:bg-brand-darkgreen transition">Commander</button>
         </div>
     </main>
-
-    <footer class="bg-stone-900 text-stone-500 py-6 text-center text-xs mt-auto w-full">
-        Bambey, Sénégal — Livraison partout dans le monde.
-    </footer>
 
     <script>
         function orderWhatsApp(name, selectId) {
             const format = document.getElementById(selectId).value;
-            const text = `Bonjour NDIAYE LOCAL ! 🌾\nJe souhaite commander le produit suivant depuis votre page Légumineuses :\n\n- Produit : *${name}*\n- Format & Prix : *${format}*\n\nExpédition depuis Bambey. Merci !`;
+            const text = `Bonjour NDIAYE LOCAL ! Je souhaite commander : *${name}* (${format}).`;
             window.open(`https://wa.me/221778688830?text=${encodeURIComponent(text)}`, '_blank');
         }
     </script>
