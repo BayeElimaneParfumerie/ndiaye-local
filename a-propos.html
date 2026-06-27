@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - NDIAYE LOCAL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { brand: { darkgreen: '#1b4d3e', green: '#2d6a4f', orange: '#e65100', lightbg: '#fcfbf7' } } } }
+        }
+    </script>
+</head>
+<body class="bg-brand-lightbg font-jakarta text-slate-800 min-h-screen">
+    <nav class="bg-white border-b h-20 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
+            <a href="index.html" class="font-bold text-brand-darkgreen">NDIAYE LOCAL</a>
+            <a href="index.html" class="text-xs font-semibold hover:text-brand-green">Retour Accueil</a>
+        </div>
+    </nav>
 
+    <main class="max-w-3xl mx-auto px-4 py-16">
+        <h1 class="text-3xl font-playfair font-bold text-brand-darkgreen mb-8">Notre engagement</h1>
+        
+        <div class="bg-white p-8 rounded-2xl border shadow-sm space-y-6">
+            <p class="text-slate-600">NDIAYE LOCAL est né d'une passion pour le terroir sénégalais. Basés à Bambey, nous sélectionnons pour vous les meilleurs produits agricoles locaux.</p>
+            
+            <h3 class="font-bold text-xl text-brand-darkgreen">Nos valeurs</h3>
+            <ul class="space-y-4 text-slate-600">
+                <li><strong>Qualité :</strong> Nous ne proposons que ce que nous consommons nous-mêmes.</li>
+                <li><strong>Hygiène :</strong> Une transformation respectueuse des normes.</li>
+                <li><strong>Proximité :</strong> Soutenir l'agriculture locale et vous satisfaire au quotidien.</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
