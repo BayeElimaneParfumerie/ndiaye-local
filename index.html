@@ -9,44 +9,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script>
         tailwind.config = {
-            theme: { extend: { colors: { brand: { darkgreen: '#1b4d3e', green: '#2d6a4f', lightgreen: '#d8f3dc', orange: '#e65100', terracotta: '#d85a38', lightbg: '#fcfbf7' } } } }
+            theme: { extend: { colors: { brand: { darkgreen: '#1b4d3e', green: '#2d6a4f', lightgreen: '#d8f3dc', orange: '#e65100', lightbg: '#fcfbf7' } } } }
         }
     </script>
 </head>
-<body class="bg-brand-lightbg font-jakarta text-slate-800 antialiased min-h-screen flex flex-col">
+<body class="bg-brand-lightbg font-jakarta text-slate-800 antialiased min-h-screen pb-20">
 
+    <!-- NAVIGATION -->
     <nav class="bg-white border-b border-stone-200 shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             <a href="index.html" class="font-playfair font-black text-xl text-brand-darkgreen">NDIAYE LOCAL</a>
-            
-            <!-- Mobile menu button -->
             <button id="menu-btn" class="md:hidden text-brand-darkgreen p-2">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
-
-            <!-- Desktop Nav -->
             <div class="hidden md:flex space-x-6 text-sm font-semibold">
                 <a href="index.html" class="text-brand-darkgreen">Accueil</a>
                 <a href="cereales.html" class="hover:text-brand-green">Céréales</a>
                 <a href="legumineuses.html" class="hover:text-brand-green">Légumineuses</a>
                 <a href="condiments.html" class="hover:text-brand-green">Condiments</a>
+                <a href="a-propos.html" class="hover:text-brand-green">À propos</a>
                 <a href="livraison.html" class="hover:text-brand-green">Livraison</a>
             </div>
             <a href="https://wa.me/221778688830" class="hidden md:block px-4 py-2 bg-brand-green text-white text-xs font-bold rounded-lg hover:bg-brand-darkgreen transition">Commander</a>
         </div>
-        
-        <!-- Mobile Nav Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 p-4 space-y-4 text-sm font-semibold">
             <a href="index.html" class="block py-2">Accueil</a>
             <a href="cereales.html" class="block py-2">Céréales</a>
             <a href="legumineuses.html" class="block py-2">Légumineuses</a>
             <a href="condiments.html" class="block py-2">Condiments</a>
+            <a href="a-propos.html" class="block py-2">À propos</a>
             <a href="livraison.html" class="block py-2">Livraison</a>
-            <a href="https://wa.me/221778688830" class="block py-3 px-4 bg-brand-green text-white text-center rounded-lg">Commander sur WhatsApp</a>
         </div>
     </nav>
 
-    <header class="py-20 bg-brand-darkgreen text-white text-center">
+    <!-- HÉROS -->
+    <header class="py-16 bg-brand-darkgreen text-white text-center">
         <div class="max-w-3xl mx-auto px-4">
             <h1 class="font-playfair text-4xl sm:text-6xl font-black mb-6">Le meilleur de notre terroir à votre porte.</h1>
             <p class="text-brand-lightgreen text-lg mb-8 opacity-90">Produits locaux, hygiène garantie, livraison rapide depuis Bambey.</p>
@@ -54,39 +51,38 @@
         </div>
     </header>
 
+    <!-- CATÉGORIES -->
     <main class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <a href="cereales.html" class="p-8 bg-white border rounded-2xl text-center hover:border-brand-green transition">
-            <i class="fa-solid fa-bowl-rice text-4xl text-brand-orange mb-4"></i>
+        <a href="cereales.html" class="p-8 bg-white border border-stone-200 rounded-2xl text-center hover:border-brand-green transition">
+            <div class="text-4xl text-brand-orange mb-4">🌾</div>
             <h3 class="font-bold text-xl mb-2">Céréales</h3>
             <p class="text-sm text-slate-500">Thiéré, Thiakry, Sankhal...</p>
         </a>
-        <a href="legumineuses.html" class="p-8 bg-white border rounded-2xl text-center hover:border-brand-green transition">
-            <i class="fa-solid fa-seedling text-4xl text-brand-orange mb-4"></i>
+        <a href="legumineuses.html" class="p-8 bg-white border border-stone-200 rounded-2xl text-center hover:border-brand-green transition">
+            <div class="text-4xl text-brand-orange mb-4">🫘</div>
             <h3 class="font-bold text-xl mb-2">Légumineuses</h3>
             <p class="text-sm text-slate-500">Niébé, Haricots...</p>
         </a>
-        <a href="condiments.html" class="p-8 bg-white border rounded-2xl text-center hover:border-brand-green transition">
-            <i class="fa-solid fa-leaf text-4xl text-brand-orange mb-4"></i>
+        <a href="condiments.html" class="p-8 bg-white border border-stone-200 rounded-2xl text-center hover:border-brand-green transition">
+            <div class="text-4xl text-brand-orange mb-4">🍃</div>
             <h3 class="font-bold text-xl mb-2">Condiments</h3>
             <p class="text-sm text-slate-500">Tiguadégué, Bissap...</p>
         </a>
-        <a href="livraison.html" class="p-8 bg-white border rounded-2xl text-center hover:border-brand-green transition">
-            <i class="fa-solid fa-truck-fast text-4xl text-brand-orange mb-4"></i>
+        <a href="livraison.html" class="p-8 bg-white border border-stone-200 rounded-2xl text-center hover:border-brand-green transition">
+            <div class="text-4xl text-brand-orange mb-4">🚚</div>
             <h3 class="font-bold text-xl mb-2">Livraison</h3>
             <p class="text-sm text-slate-500">Toutes destinations</p>
         </a>
     </main>
 
-    <footer class="bg-stone-900 text-stone-400 py-12 text-center text-sm">
-        <p class="text-white font-bold mb-2">NDIAYE LOCAL</p>
-        <p>&copy; 2026. Qualité et tradition.</p>
-    </footer>
+    <!-- BOUTON STICKY MOBILE -->
+    <div class="fixed bottom-0 left-0 w-full p-4 bg-white border-t border-stone-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50 md:hidden">
+        <a href="https://wa.me/221778688830" class="block w-full py-3 bg-brand-green text-white font-bold text-center rounded-xl hover:bg-brand-darkgreen transition">Commander sur WhatsApp</a>
+    </div>
 
     <script>
-        // Simple script for mobile menu
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
-        
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
