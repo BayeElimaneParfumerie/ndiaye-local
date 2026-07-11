@@ -1,91 +1,153 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NDIAYE LOCAL - Le meilleur du terroir sénégalais</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: { extend: { colors: { brand: { darkgreen: '#1b4d3e', green: '#2d6a4f', lightgreen: '#d8f3dc', orange: '#e65100', lightbg: '#fcfbf7' } } } }
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NDIAYE LOCAL — Le terroir sénégalais, livré chez vous</title>
+<meta name="description" content="Céréales, légumineuses, condiments et infusions du terroir sénégalais, préparés à Bambey et livrés à Dakar et dans toutes les régions. Commande simple sur WhatsApp.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-brand-lightbg font-jakarta text-slate-800 antialiased min-h-screen pb-20">
+<body>
 
-    <!-- NAVIGATION -->
-    <nav class="bg-white border-b border-stone-200 shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-playfair font-black text-xl text-brand-darkgreen">NDIAYE LOCAL</a>
-            <button id="menu-btn" class="md:hidden text-brand-darkgreen p-2">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
-            <div class="hidden md:flex space-x-6 text-sm font-semibold">
-                <a href="index.html" class="text-brand-darkgreen">Accueil</a>
-                <a href="cereales.html" class="hover:text-brand-green">Céréales</a>
-                <a href="legumineuses.html" class="hover:text-brand-green">Légumineuses</a>
-                <a href="condiments.html" class="hover:text-brand-green">Condiments</a>
-                <a href="a-propos.html" class="hover:text-brand-green">À propos</a>
-                <a href="livraison.html" class="hover:text-brand-green">Livraison</a>
-            </div>
-            <a href="https://wa.me/221778688830" class="hidden md:block px-4 py-2 bg-brand-green text-white text-xs font-bold rounded-lg hover:bg-brand-darkgreen transition">Commander</a>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 p-4 space-y-4 text-sm font-semibold">
-            <a href="index.html" class="block py-2">Accueil</a>
-            <a href="cereales.html" class="block py-2">Céréales</a>
-            <a href="legumineuses.html" class="block py-2">Légumineuses</a>
-            <a href="condiments.html" class="block py-2">Condiments</a>
-            <a href="a-propos.html" class="block py-2">À propos</a>
-            <a href="livraison.html" class="block py-2">Livraison</a>
-        </div>
-    </nav>
-
-    <!-- HÉROS -->
-    <header class="py-16 bg-brand-darkgreen text-white text-center">
-        <div class="max-w-3xl mx-auto px-4">
-            <h1 class="font-playfair text-4xl sm:text-6xl font-black mb-6">Le meilleur de notre terroir à votre porte.</h1>
-            <p class="text-brand-lightgreen text-lg mb-8 opacity-90">Produits locaux, hygiène garantie, livraison rapide depuis Bambey.</p>
-            <a href="cereales.html" class="inline-block px-8 py-4 bg-brand-orange text-white font-bold rounded-xl hover:bg-orange-700 transition">Découvrir le catalogue</a>
-        </div>
-    </header>
-
-    <!-- CATÉGORIES -->
-    <main class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <a href="cereales.html" class="p-8 bg-white border border-stone-200 rounded-2xl text-center hover:border-brand-green transition">
-            <div class="text-4xl text-brand-orange mb-4">🌾</div>
-            <h3 class="font-bold text-xl mb-2">Céréales</h3>
-            <p class="text-sm text-slate-500">Thiéré, Thiakry, Sankhal...</p>
-        </a>
-        <a href="legumineuses.html" class="p-8 bg-white border border-stone-200 rounded-2xl text-center hover:border-brand-green transition">
-            <div class="text-4xl text-brand-orange mb-4">🫘</div>
-            <h3 class="font-bold text-xl mb-2">Légumineuses</h3>
-            <p class="text-sm text-slate-500">Niébé, Haricots...</p>
-        </a>
-        <a href="condiments.html" class="p-8 bg-white border border-stone-200 rounded-2xl text-center hover:border-brand-green transition">
-            <div class="text-4xl text-brand-orange mb-4">🍃</div>
-            <h3 class="font-bold text-xl mb-2">Condiments</h3>
-            <p class="text-sm text-slate-500">Tiguadégué, Bissap...</p>
-        </a>
-        <a href="livraison.html" class="p-8 bg-white border border-stone-200 rounded-2xl text-center hover:border-brand-green transition">
-            <div class="text-4xl text-brand-orange mb-4">🚚</div>
-            <h3 class="font-bold text-xl mb-2">Livraison</h3>
-            <p class="text-sm text-slate-500">Toutes destinations</p>
-        </a>
-    </main>
-
-    <!-- BOUTON STICKY MOBILE -->
-    <div class="fixed bottom-0 left-0 w-full p-4 bg-white border-t border-stone-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50 md:hidden">
-        <a href="https://wa.me/221778688830" class="block w-full py-3 bg-brand-green text-white font-bold text-center rounded-xl hover:bg-brand-darkgreen transition">Commander sur WhatsApp</a>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="dot"></span>NDIAYE LOCAL</a>
+    <button id="menu-btn" class="menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-links">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="cereales.html">Céréales</a>
+      <a href="legumineuses.html">Légumineuses</a>
+      <a href="condiments.html">Condiments</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="livraison.html">Livraison</a>
     </div>
+    <a href="https://wa.me/221778688830" class="nav-cta"><i class="fa-brands fa-whatsapp"></i>Commander</a>
+  </div>
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="cereales.html">Céréales</a>
+    <a href="legumineuses.html">Légumineuses</a>
+    <a href="condiments.html">Condiments</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="livraison.html">Livraison</a>
+  </div>
+</nav>
 
-    <script>
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Depuis Bambey, Sénégal</span>
+    <h1>Le goût du terroir, <em>livré</em> à votre porte.</h1>
+    <p>Céréales, légumineuses, condiments et infusions sélectionnés, conditionnés avec soin — commandés en un message, livrés partout au Sénégal.</p>
+    <a href="https://wa.me/221778688830" class="btn"><i class="fa-brands fa-whatsapp"></i>Commander sur WhatsApp</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="cat-grid">
+    <a href="cereales.html" class="cat-card">
+      <div class="ic">🌾</div>
+      <h3>Céréales</h3>
+      <p>Thiéré, Thiakry, Sankal…</p>
+    </a>
+    <a href="legumineuses.html" class="cat-card">
+      <div class="ic">🫘</div>
+      <h3>Légumineuses</h3>
+      <p>Niébé, sésame…</p>
+    </a>
+    <a href="condiments.html" class="cat-card">
+      <div class="ic">🍃</div>
+      <h3>Condiments</h3>
+      <p>Tigadégué, Bissap…</p>
+    </a>
+    <a href="livraison.html" class="cat-card">
+      <div class="ic">🚚</div>
+      <h3>Livraison</h3>
+      <p>Toutes destinations</p>
+    </a>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Pourquoi NDIAYE LOCAL</span>
+      <h2>Trois engagements, aucun compromis</h2>
+    </div>
+    <div class="values">
+      <div class="value">
+        <h4>🌱 Direct du producteur</h4>
+        <p>Nos céréales et légumineuses viennent des champs autour de Bambey, sans intermédiaire inutile.</p>
+      </div>
+      <div class="value">
+        <h4>🧼 Hygiène rigoureuse</h4>
+        <p>Triage, lavage et conditionnement selon des normes strictes, avant chaque expédition.</p>
+      </div>
+      <div class="value">
+        <h4>📦 Commande sans friction</h4>
+        <p>Un message WhatsApp suffit. Pas d'application à installer, pas de compte à créer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section testimonials">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Nos clients en parlent</span>
+      <h2>Ce qu'ils disent de nous</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <p>"Le thiéré est toujours frais, livraison rapide sur Dakar !"</p>
+        <div class="who">Fatou, Almadies</div>
+      </div>
+      <div class="t-card">
+        <p>"Commande facile sur WhatsApp, produits d'excellente qualité."</p>
+        <div class="who">Moussa, Sacré-Cœur</div>
+      </div>
+      <div class="t-card">
+        <p>"Enfin des produits du terroir bien conditionnés et fiables."</p>
+        <div class="who">Aïssatou, Parcelles</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">NDIAYE LOCAL</div>
+        <p class="footer-tag">Le meilleur des produits du terroir sénégalais, préparé à Bambey et livré chez vous.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Boutique</h5>
+          <a href="cereales.html">Céréales</a>
+          <a href="legumineuses.html">Légumineuses</a>
+          <a href="condiments.html">Condiments</a>
+        </div>
+        <div class="footer-col">
+          <h5>Informations</h5>
+          <a href="a-propos.html">À propos</a>
+          <a href="livraison.html">Livraison</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="https://wa.me/221778688830">WhatsApp</a>
+          <a href="tel:+221778688830">+221 77 868 88 30</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-bottom">NDIAYE LOCAL — Bambey, Sénégal.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="https://wa.me/221778688830" class="btn"><i class="fa-brands fa-whatsapp"></i>Commander sur WhatsApp</a>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
